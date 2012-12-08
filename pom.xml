@@ -28,7 +28,7 @@
     </pluginManagement>
   </build>
 
-  <description>Todo Application</description>
+  <description>Tobacco Application</description>
 
   <scm>
     <connection>scm:git:git://file:/Users/oleksii/Dev/todo-app/</connection>
