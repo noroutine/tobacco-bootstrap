@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <definition name="base" template="/WEB-INF/jsp/layout/base.jsp">
+        <put-attribute name="title" value="jsp.general.title"/>
+        <put-attribute name="headerInclude" value="/WEB-INF/jsp/layout/fragments/headerInclude.jsp"/>
+        <put-attribute name="footerInclude" value="/WEB-INF/jsp/layout/fragments/footerInclude.jsp"/>
+        <put-attribute name="navbar" value="/WEB-INF/jsp/layout/fragments/navbar.jsp"/>
+        <put-attribute name="content" value=""/>
+    </definition>
+
+    <definition name="view.*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/views/{1}.jsp" />
+    </definition>
+
+    <definition name="error.*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/errors/{1}.jsp" />
+    </definition>
+
+    <definition name="template.*" template="/WEB-INF/jsp/templates/{1}.jsp" />
+
+</tiles-definitions>

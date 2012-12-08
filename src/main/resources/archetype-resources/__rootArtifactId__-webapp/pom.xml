@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}</artifactId>
+        <version>${version}</version>
+    </parent>
+    <artifactId>${artifactId}</artifactId>
+    <name>Web Application</name>
+    <description>Yet another incredible Tobacco application</description>
+    <version>${version}</version>
+
+    <packaging>war</packaging>
+
+    <profiles>
+        <profile>
+            <id>production</id>
+            <properties>
+                <build.profile>production</build.profile>
+                <eclipselink.logging.level>WARNING</eclipselink.logging.level>
+                <log.level>INFO</log.level>
+                <spring.log.level>WARN</spring.log.level>
+                <service.log.level>WARN</service.log.level>
+                <serialization.log.level>WARN</serialization.log.level>
+            </properties>
+        </profile>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <build.profile>development</build.profile>
+                <eclipselink.logging.level>FINE</eclipselink.logging.level>
+                <log.level>DEBUG</log.level>
+                <spring.log.level>INFO</spring.log.level>
+                <service.log.level>DEBUG</service.log.level>
+                <serialization.log.level>INFO</serialization.log.level>
+            </properties>
+        </profile>
+        <profile>
+            <id>debug</id>
+            <properties>
+                <build.profile>development</build.profile>
+                <eclipselink.logging.level>FINE</eclipselink.logging.level>
+                <log.level>DEBUG</log.level>
+                <spring.log.level>DEBUG</spring.log.level>
+                <service.log.level>DEBUG</service.log.level>
+                <serialization.log.level>TRACE</serialization.log.level>
+            </properties>
+        </profile>
+    </profiles>
+
+    <properties>
+        <tomcat.version>7.0.27</tomcat.version>
+
+        <slf4j.version>1.7.2</slf4j.version>
+        <logback.version>1.0.7</logback.version>
+
+        <jstl.version>1.2</jstl.version>
+        <tiles.version>2.2.2</tiles.version>
+        <spring.version>3.1.3.RELEASE</spring.version>
+        <spring-security.version>3.1.3.RELEASE</spring-security.version>
+        <spring-mobile.version>1.0.0.RELEASE</spring-mobile.version>
+        <aspectj.version>1.6.12</aspectj.version>
+        <cglib.version>2.2.2</cglib.version>
+        <jackson.version>2.1.1</jackson.version>
+        <urlrewritefilter.version>3.2.0</urlrewritefilter.version>
+
+        <eclipselink.version>2.4.0</eclipselink.version>
+        <hibernate-validator.version>4.3.0.Final</hibernate-validator.version>
+
+        <junit.version>4.11</junit.version>
+        <dbunit.version>2.4.9</dbunit.version>
+        <h2.version>1.3.168</h2.version>
+
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.collections.version>3.2.1</commons.collections.version>
+        <commons-beanutils.version>1.8.3</commons-beanutils.version>
+        <joda.time.version>2.1</joda.time.version>
+
+        <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
+        <aspectj.version>1.6.12</aspectj.version>
+        <jasperreports.version>4.7.0</jasperreports.version>
+        <groovy.version>1.8.6</groovy.version>
+        <guava.version>13.0.1</guava.version>
+        <thymeleaf.version>2.0.14</thymeleaf.version>
+        <mail.version>1.4.5</mail.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- JUnit 4 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- db unit -->
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${dbunit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Logging Framework -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-access</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <!-- Spring Framework -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- optional spring instrument support, http://static.springsource.com/projects/instrumentation/instrument/html/ch02s05.html -->
+        <!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument-tomcat</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        -->
+
+        <!-- Spring Mobile -->
+        <dependency>
+            <groupId>org.springframework.mobile</groupId>
+            <artifactId>spring-mobile-device</artifactId>
+            <version>${spring-mobile.version}</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+
+        <!-- Aspect/J version -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <!-- CGLib for Spring -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+
+        <!-- Tiles -->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-jsp</artifactId>
+            <version>${tiles.version}</version>
+        </dependency>
+
+        <!--  URL Rewrite -->
+        <dependency>
+            <groupId>org.tuckey</groupId>
+            <artifactId>urlrewritefilter</artifactId>
+            <version>${urlrewritefilter.version}</version>
+        </dependency>
+
+
+        <!-- JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- EclipseLink JPA provider for ORM -->
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>${eclipselink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.0.4.v201112161009</version>
+        </dependency>
+
+        <!-- Hibernate Validator for extra JSR303 annotations -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+
+        <!-- JSTL 1.2 support for Tomcat. See http://www.mularien.com/blog/2008/04/24/how-to-reference-and-use-jstl-in-your-web-application/ -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <!-- Java Mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${mail.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>me.noroutine</groupId>
+            <artifactId>dust4j</artifactId>
+            <version>0.1</version>
+        </dependency>
+
+        <!-- Useful libs -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons.lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Date/Time library -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda.time.version}</version>
+        </dependency>
+
+        <!-- servlet api provided scope for IDE only-->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>${tomcat.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-el-api</artifactId>
+            <version>${tomcat.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+            <version>${tomcat.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.parent.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>**/*.xml</exclude>
+                    <exclude>**/*.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.googlecode.t7mp</groupId>
+                <artifactId>maven-t7-plugin</artifactId>
+                <version>0.9.9</version>
+                <configuration>
+                    <tomcatVersion>${tomcat.version}</tomcatVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <timestampFormat>{0, date, HH:mm dd:MM:yyyy}</timestampFormat>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>de.icash.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.3.1</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <disableOptimizations>true</disableOptimizations>
+                    <nomunge>false</nomunge>
+                    <jswarn>false</jswarn>
+                    <preserveAllSemiColons>true</preserveAllSemiColons>
+                    <suffix>.min</suffix>
+                    <aggregations>
+                        <aggregation>
+                            <insertNewLine>true</insertNewLine>
+                            <inputDir>${project.build.directory}/${project.build.finalName}/css</inputDir>
+                            <output>${project.build.directory}/${project.build.finalName}/css/all.css</output>
+                            <includes>
+
+                                <!-- Twitter Bootstrap -->
+                                <include>vendor/bootstrap-2.2.1.min.css</include>
+                                <include>vendor/bootstrap-responsive-2.2.1.min.css</include>
+
+                                <!-- HTML5 boilerplate -->
+                                <!--<include>vendor/normalize-1.0.2.min.css</include>-->
+                                <!--<include>vendor/boilerplate-4.0.1.min.css</include>-->
+
+                                <include>main.min.css</include>
+                            </includes>
+                        </aggregation>
+                        <aggregation>
+                            <insertNewLine>true</insertNewLine>
+                            <inputDir>${project.build.directory}/${project.build.finalName}/js</inputDir>
+                            <output>${project.build.directory}/${project.build.finalName}/js/all.js</output>
+                            <excludes>
+                                <exclude>vendor/dust-full-1.1.1.min.js</exclude>
+                                <exclude>pages/*</exclude>
+                            </excludes>
+                            <includes>
+                                <include>compatibility.min.js</include>
+
+                                <include>vendor/modernizr-2.6.2.min.js</include>
+
+                                <include>vendor/jquery-1.8.3.min.js</include>
+                                <include>vendor/jquery.ba-tinypubsub.min.js</include>
+                                <include>vendor/jquery.Storage.min.js</include>
+
+                                <!-- backbone.js -->
+                                <include>vendor/underscore-1.4.2.min.js</include>
+                                <include>vendor/backbone-0.9.2.min.js</include>
+
+                                <!-- dust.js, stock minified files don't work -->
+                                <include>vendor/dust-core-1.1.1.min.js</include>
+                                <include>vendor/dust-helpers-1.1.0.min.js</include>
+
+                                <!-- Twitter Bootstrap -->
+                                <include>vendor/bootstrap-2.2.1.min.js</include>
+
+                                <include>common.min.js</include>
+                            </includes>
+                        </aggregation>
+                    </aggregations>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

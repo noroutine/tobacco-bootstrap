@@ -1,0 +1,79 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+
+	<!-- Scans within the base package of the application for @Components to configure as beans -->
+	<!-- @Controller, @Service, @Configuration, etc. -->
+    <context:component-scan base-package="${package}" use-default-filters="false">
+        <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+    </context:component-scan>
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="objectMapper" />
+            </bean>
+        </mvc:message-converters>
+        <mvc:argument-resolvers>
+            <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+
+	<!-- Serve static content from / folder via /resources endpoint-->
+    <mvc:resources location="/" mapping="/resources/**"/>
+
+    <mvc:default-servlet-handler/>
+
+    <mvc:interceptors>
+        <bean class="${package}.cache.IFNoneMatchHandlerInterceptor" />
+    </mvc:interceptors>
+
+    <bean id="messageSource" class="${package}.util.ReloadableMessageSource">
+        <property name="cacheSeconds" value="5"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="fallbackToSystemLocale" value="false"/>
+        <property name="useCodeAsDefaultMessage" value="true" />
+        <property name="parentMessageSource" ref="applicationMessageSource" />
+        <property name="basenames">
+            <list>
+                <value>classpath:errors</value>
+                <value>classpath:messages</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="en"/>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.UrlBasedViewResolver" p:order="0">
+        <!--<property name="viewNames" value="view.*,template.*,error.*" />-->
+        <property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
+    </bean>
+
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles-defs.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean name="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
+
+</beans>

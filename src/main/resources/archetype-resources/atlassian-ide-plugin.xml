@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<atlassian-ide-plugin>
+  <project-configuration>
+    <servers>
+      <jira>
+        <server-id>00000000-0000-0000-000000000000</server-id>
+        <name>Tobacco App JIRA</name>
+        <url>http://127.0.0.1:8081</url>
+        <shared>false</shared>
+      </jira>
+    </servers>
+    <default-jira-server>00000000-0000-0000-000000000000</default-jira-server>
+  </project-configuration>
+</atlassian-ide-plugin>
