@@ -81,7 +81,7 @@
 
         <%-- Dust.js --%>
         <util:js value="/resources/js/vendor/dust-core-1.1.1.js" />
-        <util:js value="/resources/js/vendor/dust-helpers-1.${version}.js" />
+        <util:js value="/resources/js/vendor/dust-helpers-1.1.0.js" />
 
         <%-- Twitter Bootstrap --%>
         <util:js value="/resources/js/vendor/bootstrap-2.2.1.js" />
