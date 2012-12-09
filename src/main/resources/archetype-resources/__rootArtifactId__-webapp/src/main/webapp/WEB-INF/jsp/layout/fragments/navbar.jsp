@@ -27,7 +27,7 @@
             <a class="brand" href="home"><spring:message code="project.name"/></a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <c:forEach var="item" items="home,demo,about">
+                    <c:forEach var="item" items="home,about">
                         <spring:message code="navbar.${symbol_dollar}{item}.title" var="itemTitle"/>
                         <c:choose>
                             <c:when test="${symbol_dollar}{item eq selectedView}">

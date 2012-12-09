@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HomeController {
 
 	@RequestMapping(value = "/home")
-	public String home(@RequestParam(required = false) final Integer a, @RequestParam(required = false) final Integer b, Model model) {
+	public String home() {
         return "view.home";
 	}
 }
