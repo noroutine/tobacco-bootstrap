@@ -5,7 +5,7 @@ HTML5 Java web app archetype with latest and gratest components.
 
 I always thought Java can do no less than RoR or any other fancy whistle framework out there without any mimicking aka Roo. 
 
-Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive style
+Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive style. It doesn't dictate you three-tiers or any particular database, but I've tried my best to save your time on starting and setting up new web project.
 
 Whats inside
 ------------
@@ -22,8 +22,10 @@ Client=-side stuff
 * [dust4j](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
-* [Spring 3.1.3] 
-* [Tiles 2.2.2]
+* [Spring 3.1.3](http://www.springsource.org/) for wiring your components
+* [Tiles 2.2.2](http://tiles.apache.org/) to organize your views
+
+There is some dozen of other smaller and less important stuff that you find adding to any new project all the time. 
 
 _Important notes about JPA and database access_
 
