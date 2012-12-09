@@ -35,9 +35,11 @@
 
 <p>HTML5 Java web app archetype with latest and gratest components.</p>
 
-<p>I always thought Java can do no less than RoR or any other fancy whistle framework out there without any mimicking aka Roo. Tobacco's focus is on providing modern stuff inside and make it easy to start a project with best of breed HTML and JavaScript</p>
+<p>I always thought Java can do no less than RoR or any other fancy whistle framework out there without any mimicking aka Roo. So I decided to create this client-centric archetype that is always packed with latest JS and Java libraries, uses all the latests best practices and called it Tobacco because it's addictive!</p>
 
-<p>Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive style. It doesn't dictate you three-tiers or any particular database, but it tries its best to save your time on starting and setting up new web project.</p>
+<p>Tobacco's focus is on providing modern stuff inside and make it easy to start a project with best of breed HTML5 templates and JavaScript libs, so you don't spend hours settings up the project, downloading libraries and placing them in correct locations. With Tobacco you always get's this done for you. All you need is generate your project and start coding.</p>
+
+<p>Tobacco shows how Java can do modern projects in 5 seconds in it's own style. It doesn't dictate you to three-tiers if you do something simple, nor does it tells you which persistence layer to use, instead it tries its best to save your time on starting and setting up new web project and not be in the way after that.</p>
 
 <h2>Demo</h2>
 
@@ -75,9 +77,16 @@
 <a href="http://www.springsource.org/">Spring</a> for wiring your components</li>
 <li>
 <a href="http://tiles.apache.org/">Tiles</a> to organize your views</li>
-</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time. </p>
+</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient. </p>
 
-<h2>About JPA and database access</h2>
+<ul>
+<li>
+<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js">common.js</a> adds UUID, weak ID and Base64 support among other things</li>
+<li>
+<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java">ResourceController</a> automatically exposes your i18n resources to JS so you can reuse them</li>
+<li>
+<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java">@IfNoneMatch</a> annotation lets you make your responses cacheable by browser</li>
+</ul><h2>About JPA and database access</h2>
 
 <p>I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill and just narrow-minded to require database for any project. If you need it - you can still set it up though.</p>
 
@@ -117,17 +126,7 @@ mvn package t7:run
 
 <p>after few minutes of terrifying console output, you can hope to access your new app at http://localhost:8080/</p>
 
-<h2>Profiles</h2>
-
-<p>Project generated from Tobacco Bootstrap has three profiles:</p>
-
-<ul>
-<li>development(default) - development version of JS and CSS are used, moderate logging</li>
-<li>production - minified versions of JS and CSS are used, only errors are logged</li>
-<li>debug - same as development, but maximum logging</li>
-</ul><h2>Build Versioning</h2>
-
-<p>For generated projects to run, they should be versioned by Git (preferred) or any other SCM.</p>
+<p>Read through <a href="https://github.com/noroutine/tobacco-bootstrap/blob/master/README.md">README</a> to get an idea how to get most from Tobacco.</p>
 
 <h2>Thanks</h2>
 
