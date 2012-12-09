@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tiles-definitions PUBLIC
         "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
@@ -8,18 +5,22 @@
 <tiles-definitions>
 
     <definition name="base" template="/WEB-INF/jsp/layout/base.jsp">
-        <put-attribute name="title" value="jsp.general.title"/>
+        <put-attribute name="title" value="page.general.title" />
+        <put-attribute name="view" value="" cascade="true" />
         <put-attribute name="headerInclude" value="/WEB-INF/jsp/layout/fragments/headerInclude.jsp"/>
         <put-attribute name="footerInclude" value="/WEB-INF/jsp/layout/fragments/footerInclude.jsp"/>
-        <put-attribute name="navbar" value="/WEB-INF/jsp/layout/fragments/navbar.jsp"/>
+        <put-attribute name="navbar" value="/WEB-INF/jsp/layout/fragments/navbar.jsp" />
         <put-attribute name="content" value=""/>
     </definition>
 
     <definition name="view.*" extends="base">
+        <put-attribute name="title" value="page.{1}.title" />
+        <put-attribute name="view" value="{1}" cascade="true" />
         <put-attribute name="content" value="/WEB-INF/jsp/views/{1}.jsp" />
     </definition>
 
     <definition name="error.*" extends="base">
+        <put-attribute name="title" value="error.general.title" />
         <put-attribute name="content" value="/WEB-INF/jsp/errors/{1}.jsp" />
     </definition>
 

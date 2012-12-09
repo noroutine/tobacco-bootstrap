@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%--
  @author Oleksii Khilkevych
@@ -14,6 +11,8 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
 
+<tiles:useAttribute name="view" id="selectedView"/>
+
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -22,16 +21,33 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="home"><spring:message code="project.name"/> </a>
-
+            <a class="brand" href="home"><spring:message code="project.name"/></a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="home">Home</a></li>
-                    <li><a href="demo">Demo</a></li>
-                    <li><a href="about">About</a></li>
+                    <c:forEach var="item" items="home,demo,about">
+                        <spring:message code="navbar.${item}.title" var="itemTitle"/>
+                        <c:choose>
+                            <c:when test="${item eq selectedView}">
+                                <li class="active"><a href="${item}">${itemTitle}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${item}">${itemTitle}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
                 </ul>
                 <ul class="nav pull-right">
-                    <li><a href="contact">Contact</a></li>
+                    <c:forEach var="item" items="contact">
+                        <spring:message var="itemTitle" code="navbar.${item}.title" />
+                        <c:choose>
+                            <c:when test="${item eq selectedView}">
+                                <li class="active"><a href="${item}">${itemTitle}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${item}">${itemTitle}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
                 </ul>
             </div> <!--/.nav-collapse -->
         </div>

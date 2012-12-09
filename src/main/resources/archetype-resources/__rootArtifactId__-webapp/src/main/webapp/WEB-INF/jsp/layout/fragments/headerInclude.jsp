@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%--
  @author Oleksii Khilkevych
@@ -17,13 +14,13 @@
 <spring:message code="build.profile" var="build_profile"/>
 
 <c:choose>
-    <c:when test="${symbol_dollar}{build_profile eq 'production'}">
+    <c:when test="${build_profile eq 'production'}">
         <util:css href="/resources/css/all.css" />
     </c:when>
     <c:otherwise>
 
         <%-- HTML5 boilerplate, see: http://html5boilerplate.com/--%>
-        <%--<util:css href="/resources/css/vendor/normalize-${version}.2.css" />--%>
+        <%--<util:css href="/resources/css/vendor/normalize-1.0-SNAPSHOT.2.css" />--%>
         <%--<util:css href="/resources/css/vendor/boilerplate-4.0.1.css" />--%>
 
         <%-- Twitter Bootstrap, see: http://twitter.github.com/bootstrap/ --%>
@@ -62,7 +59,7 @@
 <util:js value="/resources.js"/>
 
 <c:choose>
-    <c:when test="${symbol_dollar}{build_profile eq 'production'}">
+    <c:when test="${build_profile eq 'production'}">
         <util:js value="/resources/js/all.js" minify="false"/>
     </c:when>
     <c:otherwise>
@@ -72,8 +69,8 @@
         <util:js value="/resources/js/vendor/modernizr-2.6.2.js"/>
 
         <util:js value="/resources/js/vendor/jquery-1.8.3.js"/>
-        <util:js value="/resources/js/vendor/jquery.ba-tinypubsub.min.js"/>
-        <util:js value="/resources/js/vendor/jquery.Storage.min.js"/>
+        <util:js value="/resources/js/vendor/jquery.ba-tinypubsub.js"/>
+        <util:js value="/resources/js/vendor/jquery.Storage.js"/>
 
         <%-- Backbone.js --%>
         <util:js value="/resources/js/vendor/underscore-1.4.2.js" />
