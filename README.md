@@ -10,7 +10,9 @@ Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive
 Whats inside
 ------------
 
-Client-side stuff
+All components are of latest versions. I'll continue to update this archetype with latest versions.
+
+Client-side stuff 
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) for your UI to not suck
 * [HTML5 boilderplate](http://html5boilerplate.com/) for your result HTML to use best practices available
 * [modernizr.js](http://modernizr.com/) to make your app display good on anything
@@ -22,8 +24,8 @@ Client-side stuff
 * [dust4j](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
-* [Spring 3.1.3](http://www.springsource.org/) for wiring your components
-* [Tiles 2.2.2](http://tiles.apache.org/) to organize your views
+* [Spring](http://www.springsource.org/) for wiring your components
+* [Tiles](http://tiles.apache.org/) to organize your views
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time. 
 
