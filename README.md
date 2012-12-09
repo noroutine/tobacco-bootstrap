@@ -10,7 +10,7 @@ Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive
 Whats inside
 ------------
 
-Client=-side stuff
+Client-side stuff
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) for your UI to not suck
 * [HTML5 boilderplate](http://html5boilerplate.com/) for your result HTML to use best practices available
 * [modernizr.js](http://modernizr.com/) to make your app display good on anything
