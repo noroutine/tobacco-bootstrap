@@ -7,6 +7,8 @@ I always thought Java can do no less than RoR or any other fancy whistle framewo
 
 Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive style. It doesn't dictate you three-tiers or any particular database, but I've tried my best to save your time on starting and setting up new web project.
 
+Enough words, just let me show you the [demo](http://zion.noroutine.me:8080/tobacco-demo) first. 
+
 Whats inside
 ------------
 
