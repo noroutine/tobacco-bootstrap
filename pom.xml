@@ -8,8 +8,13 @@
   <packaging>maven-archetype</packaging>
 
   <name>tobacco-bootstrap</name>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
+
     <extensions>
       <extension>
         <groupId>org.apache.maven.archetype</groupId>

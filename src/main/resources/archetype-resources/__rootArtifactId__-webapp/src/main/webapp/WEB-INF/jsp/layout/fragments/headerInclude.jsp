@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 <%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%--
  @author Oleksii Khilkevych
@@ -14,7 +17,7 @@
 <spring:message code="build.profile" var="build_profile"/>
 
 <c:choose>
-    <c:when test="${build_profile eq 'production'}">
+    <c:when test="${symnbol_dollar}{symnbol_dollar}{symnbol_dollar}{build_profile eq 'production'}">
         <util:css href="/resources/css/all.css" />
     </c:when>
     <c:otherwise>
@@ -59,7 +62,7 @@
 <util:js value="/resources.js"/>
 
 <c:choose>
-    <c:when test="${build_profile eq 'production'}">
+    <c:when test="${symbol_dollar}{build_profile eq 'production'}">
         <util:js value="/resources/js/all.js" minify="false"/>
     </c:when>
     <c:otherwise>

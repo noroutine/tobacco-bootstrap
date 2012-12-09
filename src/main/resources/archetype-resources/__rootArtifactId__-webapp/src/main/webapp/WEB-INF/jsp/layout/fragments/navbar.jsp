@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 <%@ page contentType="text/html;charset=UTF-8" language="java" trimDirectiveWhitespaces="true" %>
 <%--
  @author Oleksii Khilkevych
@@ -25,26 +28,26 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <c:forEach var="item" items="home,demo,about">
-                        <spring:message code="navbar.${item}.title" var="itemTitle"/>
+                        <spring:message code="navbar.${symbol_dollar}{item}.title" var="itemTitle"/>
                         <c:choose>
-                            <c:when test="${item eq selectedView}">
-                                <li class="active"><a href="${item}">${itemTitle}</a></li>
+                            <c:when test="${symbol_dollar}{item eq selectedView}">
+                                <li class="active"><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
                             </c:when>
                             <c:otherwise>
-                                <li><a href="${item}">${itemTitle}</a></li>
+                                <li><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
                 </ul>
                 <ul class="nav pull-right">
                     <c:forEach var="item" items="contact">
-                        <spring:message var="itemTitle" code="navbar.${item}.title" />
+                        <spring:message var="itemTitle" code="navbar.${symbol_dollar}{item}.title" />
                         <c:choose>
-                            <c:when test="${item eq selectedView}">
-                                <li class="active"><a href="${item}">${itemTitle}</a></li>
+                            <c:when test="${symbol_dollar}{item eq selectedView}">
+                                <li class="active"><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
                             </c:when>
                             <c:otherwise>
-                                <li><a href="${item}">${itemTitle}</a></li>
+                                <li><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
