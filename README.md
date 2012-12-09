@@ -84,5 +84,8 @@ Thanks
 ------
 
 Thanks to H5BP and TB guys. You're the best and I just love you!
-Thanks to GitHub, your service is awesome. Thanks to Maven guys, you simply rock, but please can you make mvn less verbose by default ;)
+
+Thanks to GitHub, your service is awesome.
+
+Thanks to Maven guys, you simply rock, but please can you make mvn less verbose by default ;)
 
