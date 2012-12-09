@@ -88,6 +88,8 @@ Project generated from Tobacco Bootstrap has three profiles:
 * production - minified versions of JS and CSS are used, only errors are logged
 * debug - same as development, but maximum logging
 
+Switch beetween them from your IDE, or in command-line add `-P<profile>` as option to `mvn`
+
 Build Versioning
 ----------------
 
