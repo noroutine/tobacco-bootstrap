@@ -73,7 +73,7 @@
             <id>jboss</id>
             <name>JBoss Repository</name>
             <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
-        </repository>
+        </repository>        
         <repository>
             <id>EclipseLink Repo</id>
             <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
@@ -82,6 +82,11 @@
               <enabled>true</enabled>
            </snapshots>
            -->
+        </repository>
+        <repository>
+            <id>sonatype-release</id>
+            <name>Sonatype OSS repository</name>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
 
         <repository>
