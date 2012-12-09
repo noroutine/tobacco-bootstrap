@@ -3,13 +3,18 @@
 
 HTML5 Java web app archetype with latest and gratest components.
 
-I always thought Java can do no less than RoR or any other fancy whistle framework out there without any mimicking aka Roo. 
+I always thought Java can do no less than RoR or any other fancy whistle framework out there without any mimicking aka Roo. So I decided to create this client-centric archetype that is always packed with latest JS and Java libraries, uses all the latests best practices and called it Tobacco because it's addictive!
 
-Tobacco shows how Java can do modern projects in 5 seconds in it's own addictive style. It doesn't dictate you three-tiers or any particular database, but I've tried my best to save your time on starting and setting up new web project.
+Tobacco's focus is on providing modern stuff inside and make it easy to start a project with best of breed HTML5 templates and JavaScript libs, so you don't spend hours settings up the project, downloading libraries and placing them in correct locations. With Tobacco you always get's this done for you. All you need is generate your project and start coding.
 
-Enough words, just let me show you the [demo](http://zion.noroutine.me:8080/tobacco-demo) first. 
+Tobacco shows how Java can do modern projects in 5 seconds in it's own style. It doesn't dictate you to three-tiers if you do something simple, nor does it tells you which persistence layer to use, instead it tries its best to save your time on starting and setting up new web project and not be in the way after that.
 
-Whats inside
+Demo
+----
+
+Real website is worth thousands of words, so I setup [Tobacco Demo](http://zion.noroutine.me:8080/tobacco-demo) for you to check.
+
+What's inside
 ------------
 
 All components are of latest versions. I'll continue to update this archetype with latest versions.
@@ -22,21 +27,25 @@ Client-side stuff
 * [jQuery](http://jquery.com/) for you to write less and do more
 * [Backbone.js](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
 * [underscore.js](http://underscorejs.org/) to give you powerful common library
-* [dust.js](linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
+* [dust.js](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
 * [dust4j](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
 * [Spring](http://www.springsource.org/) for wiring your components
 * [Tiles](http://tiles.apache.org/) to organize your views
 
-There is some dozen of other smaller and less important stuff that you find adding to any new project all the time. 
+There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient. 
 
-_Important notes about JPA and database access_
+* [common.js](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js) adds UUID, weak ID and Base64 support among other things
+* [ResourceController](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java) automatically exposes your i18n resources to JS so you can reuse them
+* [@IfNoneMatch](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java) annotation lets you make your responses cacheable by browser
 
-I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. 
+About JPA and database access
+-----------------------------
+
+I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill and just narrow-minded to require database for any project. If you need it - you can still set it up though.
+
 All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start. 
-
-Instead I've made a focus on packing modern stuff inside and make it easy to start a project with best of breed HTML and javascript
 
 Work of H5BP and TB was combined and Bootstrap is used by default, but you can still easily fallback and use plain H5BP if you don't intemd to use TB.
 That means that all the stuff from H5BP is still provided for you to benefit from professional comments, I tried to be as consistent as possible with original works.
@@ -45,6 +54,8 @@ All scripts have their minified versions present. JS and CSS is automatically co
 
 How to use
 ----------
+
+_Make sure you have the latest Maven installed, at least version 3.0.4 is required_
 
     git clone git://github.com/noroutine/tobacco-bootstrap.git
     cd tobacco-bootstrap
