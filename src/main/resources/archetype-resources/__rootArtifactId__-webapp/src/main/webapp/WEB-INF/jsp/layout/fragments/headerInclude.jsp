@@ -17,7 +17,7 @@
 <spring:message code="build.profile" var="build_profile"/>
 
 <c:choose>
-    <c:when test="${symnbol_dollar}{symnbol_dollar}{symnbol_dollar}{build_profile eq 'production'}">
+    <c:when test="${symbol_dollar}{build_profile eq 'production'}">
         <util:css href="/resources/css/all.css" />
     </c:when>
     <c:otherwise>
