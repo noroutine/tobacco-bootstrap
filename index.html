@@ -45,6 +45,39 @@
 
 <p>Real website is worth thousands of words, so I setup <a href="http://zion.noroutine.me:8080/tobacco-demo">Tobacco Demo</a> for you to check.</p>
 
+<h2>How to use</h2>
+
+<p><em>Make sure you have the latest Maven installed, at least version 3.0.4 is required</em></p>
+
+<pre><code>git clone git://github.com/noroutine/tobacco-bootstrap.git
+cd tobacco-bootstrap
+mvn install
+</code></pre>
+
+<p>Now anytime you are ready to rock the world with new project:</p>
+
+<pre><code>mvn archetype:generate                                      \
+      -DarchetypeGroupId=me.noroutine                       \
+      -DarchetypeArtifactId=tobacco-bootstrap               \
+      -DarchetypeVersion=1.0
+</code></pre>
+
+<p>now your project is generated, it is required to setup SCM. git is meant to be used.</p>
+
+<pre><code>cd &lt;app-name&gt;
+git init
+</code></pre>
+
+<p>Now you're ready to go:</p>
+
+<pre><code>cd &lt;app-name&gt;-webapps
+mvn package t7:run
+</code></pre>
+
+<p>after few minutes of terrifying console output, you can hope to access your new app at http://localhost:8080/</p>
+
+<p>Read through <a href="https://github.com/noroutine/tobacco-bootstrap/blob/master/README.md">README</a> to get an idea how to get most from Tobacco.</p>
+
 <h2>What's inside</h2>
 
 <p>All components are of latest versions. I'll continue to update this archetype with latest versions.</p>
@@ -96,39 +129,6 @@
 That means that all the stuff from H5BP is still provided for you to benefit from professional comments, I tried to be as consistent as possible with original works.</p>
 
 <p>All scripts have their minified versions present. JS and CSS is automatically compressed and aggregated if you use production profile. </p>
-
-<h2>How to use</h2>
-
-<p><em>Make sure you have the latest Maven installed, at least version 3.0.4 is required</em></p>
-
-<pre><code>git clone git://github.com/noroutine/tobacco-bootstrap.git
-cd tobacco-bootstrap
-mvn install
-</code></pre>
-
-<p>Now anytime you are ready to rock the world with new project:</p>
-
-<pre><code>mvn archetype:generate                                      \
-      -DarchetypeGroupId=me.noroutine                       \
-      -DarchetypeArtifactId=tobacco-bootstrap               \
-      -DarchetypeVersion=1.0
-</code></pre>
-
-<p>now your project is generated, it is required to setup SCM. git is meant to be used.</p>
-
-<pre><code>cd &lt;app-name&gt;
-git init
-</code></pre>
-
-<p>Now you're ready to go:</p>
-
-<pre><code>cd &lt;app-name&gt;-webapps
-mvn package t7:run
-</code></pre>
-
-<p>after few minutes of terrifying console output, you can hope to access your new app at http://localhost:8080/</p>
-
-<p>Read through <a href="https://github.com/noroutine/tobacco-bootstrap/blob/master/README.md">README</a> to get an idea how to get most from Tobacco.</p>
 
 <h2>Thanks</h2>
 
