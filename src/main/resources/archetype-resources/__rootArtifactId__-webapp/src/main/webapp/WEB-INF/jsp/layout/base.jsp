@@ -10,6 +10,8 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
 
+<spring:url value="/" var="base" />
+
 <!DOCTYPE html>
 <%-- Modernizr removed no-js with js to detect javascript support, see http://modernizr.github.com/Modernizr/annotatedsource.html--%>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -49,7 +51,20 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 
-    <%-- Place favicon.ico and apple-touch-icon.png in the root directory --%>
+    <%-- Place favicon.ico and apple-touch-icon.png in the webapps directory --%>
+    <link rel="icon" type="image/x-icon" href="${symbol_dollar}{base}/favicon.ico">
+
+    <%-- https://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html --%>
+    <link rel="apple-touch-icon" href="${symbol_dollar}{base}/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="${symbol_dollar}{base}/apple-touch-icon-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="${symbol_dollar}{base}/apple-touch-icon-57x57-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${symbol_dollar}{base}/apple-touch-icon-72x72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${symbol_dollar}{base}/apple-touch-icon-114x114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${symbol_dollar}{base}/apple-touch-icon-144x144-precomposed.png"/>
+
+    <%--<link rel="apple-touch-startup-image" href="/startup.png">--%>
+    <%--<meta name="apple-mobile-web-app-capable" content="yes" />--%>
+    <%--<meta name="apple-mobile-web-app-status-bar-style" content="black" />--%>
 
     <tiles:useAttribute name="title" id="title_code"/>
     <title><spring:message code="${symbol_dollar}{title_code}"/></title>
