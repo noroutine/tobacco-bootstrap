@@ -3,12 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <groupId>me.noroutine</groupId>
     <artifactId>tobacco-bootstrap</artifactId>
-    <version>1.0</version>
-    <packaging>maven-archetype</packaging>
-
+    <version>1.0-SNAPSHOT</version>
     <name>tobacco-bootstrap</name>
+    <description>Web Application with all modern client libraries</description>
+    <url>http://tobacco.noroutine.me/</url>
+
+    <packaging>maven-archetype</packaging>
 
     <licenses>
         <license>
@@ -37,7 +45,21 @@
     </properties>
 
     <build>
-
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
         <extensions>
             <extension>
                 <groupId>org.apache.maven.archetype</groupId>
@@ -45,7 +67,6 @@
                 <version>2.2</version>
             </extension>
         </extensions>
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -55,11 +76,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <description>Tobacco Application</description>
-
-    <scm>
-        <connection>scm:git:git://file:/Users/oleksii/Dev/todo-app/</connection>
-        <url>scm:git:git://file:/Users/oleksii/Dev/todo-app/</url>
-    </scm>
 </project>
