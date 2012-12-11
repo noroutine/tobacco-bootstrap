@@ -45,32 +45,31 @@
 
 <p>Real website is worth thousands of words, so I setup <a href="http://zion.noroutine.me:8080/tobacco-demo">Tobacco Demo</a> for you to check.</p>
 
+<h2>How up to date Tobacco is?</h2>
+
+<p>Tobacco tries it's best to always include the latest release versions of most popular client libraries.  </p>
+
+<p>Latest Tobacco 1.0.1 charges you with Twitter Bootstrap 2.2.2 and HTML5 Boilerplate 4.0.2.</p>
+
+<h2>How to get</h2>
+
+<p>You don't need to download Tobacco or install it, Maven does the magic for you. Make sure you have the latest Maven installed, at least version 3.0.4 is required.</p>
+
 <h2>How to use</h2>
 
-<p><em>Make sure you have the latest Maven installed, at least version 3.0.4 is required</em></p>
-
-<pre><code>git clone git://github.com/noroutine/tobacco-bootstrap.git
-cd tobacco-bootstrap
-mvn install
-</code></pre>
-
-<p>Now anytime you are ready to rock the world with new project:</p>
+<p>Anytime you are ready to rock the world with new project:</p>
 
 <pre><code>mvn archetype:generate                                      \
       -DarchetypeGroupId=me.noroutine                       \
       -DarchetypeArtifactId=tobacco-bootstrap               \
-      -DarchetypeVersion=1.0
+      -DarchetypeVersion=1.0.1
 </code></pre>
 
-<p>now your project is generated, it is required to setup SCM. git is meant to be used.</p>
+<p>This will create a two-module project, which you can open in your favorite IDE right away.</p>
 
-<pre><code>cd &lt;app-name&gt;
-git init
-</code></pre>
+<p>You can also run it from Terminal right away to see how it looks. Go to the web module and run it.</p>
 
-<p>Now you're ready to go:</p>
-
-<pre><code>cd &lt;app-name&gt;-webapps
+<pre><code>cd &lt;app-name&gt;/&lt;app-name&gt;-webapp
 mvn package t7:run
 </code></pre>
 
@@ -86,40 +85,33 @@ mvn package t7:run
 
 <ul>
 <li>
-<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> for your UI to not suck</li>
+<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2.2.2</a> for your UI to not suck</li>
 <li>
-<a href="http://html5boilerplate.com/">HTML5 boilderplate</a> for your result HTML to use best practices available</li>
+<a href="http://html5boilerplate.com/">HTML5 boilderplate 4.0.2</a> for your result HTML to use best practices available</li>
 <li>
-<a href="http://modernizr.com/">modernizr.js</a> to make your app display good on anything</li>
+<a href="http://modernizr.com/">modernizr.js 2.6.2</a> to make your app display good on anything</li>
 <li>
-<a href="http://necolas.github.com/normalize.css/">normalize.css</a> for your app to look consistent</li>
+<a href="http://necolas.github.com/normalize.css/">normalize.css 1.0.2</a> for your app to look consistent</li>
 <li>
-<a href="http://jquery.com/">jQuery</a> for you to write less and do more</li>
+<a href="http://jquery.com/">jQuery 1.8.3</a> for you to write less and do more</li>
 <li>
-<a href="http://backbonejs.org/">Backbone.js</a> to make your JS code to be organized more MVC-ish</li>
+<a href="http://backbonejs.org/">Backbone.js 0.9.2</a> to make your JS code to be organized more MVC-ish</li>
 <li>
-<a href="http://underscorejs.org/">underscore.js</a> to give you powerful common library</li>
+<a href="http://underscorejs.org/">underscore.js 1.9.2</a> to give you powerful common library</li>
 <li>
-<a href="http://linkedin.github.com/dustjs/">dust.js</a> for you to use the fastest client-side templating engine on the planet</li>
+<a href="http://linkedin.github.com/dustjs/">dust.js 1.1.1</a> for you to use the fastest client-side templating engine on the planet</li>
 <li>
-<a href="http://dust4j.noroutine.me/">dust4j</a> to let you write your templates in pure JSP and make them dynamic</li>
+<a href="http://dust4j.noroutine.me/">dust4j 0.1</a> to let you write your templates in pure JSP and make them dynamic</li>
 </ul><p>Server-side stuff</p>
 
 <ul>
 <li>
-<a href="http://www.springsource.org/">Spring</a> for wiring your components</li>
+<a href="http://www.springsource.org/">Spring 3.1.3</a> for wiring your components</li>
 <li>
-<a href="http://tiles.apache.org/">Tiles</a> to organize your views</li>
-</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient. </p>
+<a href="http://tiles.apache.org/">Tiles 2.2.2</a> to organize your views</li>
+</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient.</p>
 
-<ul>
-<li>
-<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js">common.js</a> adds UUID, weak ID and Base64 support among other things</li>
-<li>
-<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java">ResourceController</a> automatically exposes your i18n resources to JS so you can reuse them</li>
-<li>
-<a href="https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java">@IfNoneMatch</a> annotation lets you make your responses cacheable by browser</li>
-</ul><h2>About JPA and database access</h2>
+<h2>About JPA and database access</h2>
 
 <p>I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill and just narrow-minded to require database for any project. If you need it - you can still set it up though.</p>
 
