@@ -1,0 +1,22 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss} [%level] %mdc{req.requestURL} %logger{32} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- don't change levels here, use profiles instead -->
+    <logger name="org.springframework" level="${symbol_dollar}{spring.log.level}" />
+    <logger name="${symbol_dollar}{package}.service" level="${symbol_dollar}{service.log.level}" />
+
+    <root>
+        <level value="${symbol_dollar}{log.level}"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
