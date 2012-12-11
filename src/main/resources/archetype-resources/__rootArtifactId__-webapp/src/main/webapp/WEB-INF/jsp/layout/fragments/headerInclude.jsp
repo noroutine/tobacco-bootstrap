@@ -84,7 +84,7 @@
         <util:js value="/resources/js/vendor/dust-helpers-1.1.0.js" />
 
         <%-- Twitter Bootstrap --%>
-        <util:js value="/resources/js/vendor/bootstrap-2.2.1.js" />
+        <util:js value="/resources/js/vendor/bootstrap-2.2.2.js" />
 
         <util:js value="/resources/js/common.js"/>
     </c:otherwise>

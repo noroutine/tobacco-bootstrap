@@ -1,42 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>me.noroutine</groupId>
-  <artifactId>tobacco-bootstrap</artifactId>
-  <version>1.0</version>
-  <packaging>maven-archetype</packaging>
+    <groupId>me.noroutine</groupId>
+    <artifactId>tobacco-bootstrap</artifactId>
+    <version>1.0</version>
+    <packaging>maven-archetype</packaging>
 
-  <name>tobacco-bootstrap</name>
-  
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <name>tobacco-bootstrap</name>
 
-  <build>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>2.2</version>
-      </extension>
-    </extensions>
+    <scm>
+        <url>git@github.com:noroutine/tobacco-bootstrap.git</url>
+        <connection>scm:git:git@github.com:noroutine/tobacco-bootstrap.git</connection>
+        <developerConnection>scm:git:git@github.com:noroutine/tobacco-bootstrap.git</developerConnection>
+    </scm>
 
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>2.2</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+    <developers>
+        <developer>
+            <id>oleksiy@noroutine.me</id>
+            <name>Oleksii Khilkevych</name>
+            <email>oleksiy@noroutine.me</email>
+        </developer>
+    </developers>
 
-  <description>Tobacco Application</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-  <scm>
-    <connection>scm:git:git://file:/Users/oleksii/Dev/todo-app/</connection>
-    <url>scm:git:git://file:/Users/oleksii/Dev/todo-app/</url>
-  </scm>
+    <build>
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <description>Tobacco Application</description>
+
+    <scm>
+        <connection>scm:git:git://file:/Users/oleksii/Dev/todo-app/</connection>
+        <url>scm:git:git://file:/Users/oleksii/Dev/todo-app/</url>
+    </scm>
 </project>
