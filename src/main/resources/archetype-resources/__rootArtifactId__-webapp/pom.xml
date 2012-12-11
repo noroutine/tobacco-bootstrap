@@ -475,7 +475,7 @@
                                 <include>vendor/jquery.Storage.min.js</include>
 
                                 <!-- backbone.js -->
-                                <include>vendor/underscore-1.4.2.min.js</include>
+                                <include>vendor/underscore-1.4.3.min.js</include>
                                 <include>vendor/backbone-0.9.2.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->

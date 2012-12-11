@@ -76,7 +76,7 @@
         <util:js value="/resources/js/vendor/jquery.Storage.js"/>
 
         <%-- Backbone.js --%>
-        <util:js value="/resources/js/vendor/underscore-1.4.2.js" />
+        <util:js value="/resources/js/vendor/underscore-1.4.3.js" />
         <util:js value="/resources/js/vendor/backbone-0.9.2.js" />
 
         <%-- Dust.js --%>
