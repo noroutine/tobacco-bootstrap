@@ -63,8 +63,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${symbol_dollar}{base}/apple-touch-icon-144x144-precomposed.png"/>
 
     <%--<link rel="apple-touch-startup-image" href="/startup.png">--%>
-    <%--<meta name="apple-mobile-web-app-capable" content="yes" />--%>
-    <%--<meta name="apple-mobile-web-app-status-bar-style" content="black" />--%>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <tiles:useAttribute name="title" id="title_code"/>
     <title><spring:message code="${symbol_dollar}{title_code}"/></title>
