@@ -77,7 +77,7 @@
 
         <%-- Backbone.js --%>
         <util:js value="/resources/js/vendor/underscore-1.4.3.js" />
-        <util:js value="/resources/js/vendor/backbone-0.9.2.js" />
+        <util:js value="/resources/js/vendor/backbone-0.9.9.js" />
 
         <%-- Dust.js --%>
         <util:js value="/resources/js/vendor/dust-core-1.1.1.js" />
