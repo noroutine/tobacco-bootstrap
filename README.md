@@ -20,19 +20,19 @@ What's inside
 All components are of latest versions. I'll continue to update this archetype with latest versions.
 
 Client-side stuff 
-* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) for your UI to not suck
-* [HTML5 boilderplate](http://html5boilerplate.com/) for your result HTML to use best practices available
-* [modernizr.js](http://modernizr.com/) to make your app display good on anything
-* [normalize.css](http://necolas.github.com/normalize.css/) for your app to look consistent
-* [jQuery](http://jquery.com/) for you to write less and do more
-* [Backbone.js](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
-* [underscore.js](http://underscorejs.org/) to give you powerful common library
-* [dust.js](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
-* [dust4j](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
+* [Twitter Bootstrap 2.2.2](http://twitter.github.com/bootstrap/) for your UI to not suck
+* [HTML5 boilderplate 4.0.2](http://html5boilerplate.com/) for your result HTML to use best practices available
+* [modernizr.js 2.6.2](http://modernizr.com/) to make your app display good on anything
+* [normalize.css 1.0.2](http://necolas.github.com/normalize.css/) for your app to look consistent
+* [jQuery 1.8.3](http://jquery.com/) for you to write less and do more
+* [Backbone.js 0.9.2](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
+* [underscore.js 1.4.3](http://underscorejs.org/) to give you powerful common library
+* [dust.js 1.1.1](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
+* [dust4j 0.1](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
-* [Spring](http://www.springsource.org/) for wiring your components
-* [Tiles](http://tiles.apache.org/) to organize your views
+* [Spring 3.1.3](http://www.springsource.org/) for wiring your components
+* [Tiles 2.2.2](http://tiles.apache.org/) to organize your views
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient. 
 
@@ -54,8 +54,9 @@ All scripts have their minified versions present. JS and CSS is automatically co
 
 How to use
 ----------
-
 _Make sure you have the latest Maven installed, at least version 3.0.4 is required_
+
+Normally Maven you don't need to install Tobacco, but in case you want to work with development version, follow thes instructions.
 
     git clone git://github.com/noroutine/tobacco-bootstrap.git
     cd tobacco-bootstrap
