@@ -1,4 +1,9 @@
 # ChangeLog
+## 1.0.3 (14 Dec 2012)
+* Spring 3.2
+* backbone.js 0.9.9
+* other libraries updates, pom cleanup and minor fixes
+
 ## 1.0.2 (11 Dec 2012)
 * initial public release
 * update to Twitter Bootstrap 2.2.2
