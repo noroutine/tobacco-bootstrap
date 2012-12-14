@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>${groupId}</groupId>
-        <artifactId>${rootArtifactId}</artifactId>
-        <version>${version}</version>
+        <groupId>me.noroutine</groupId>
+        <artifactId>test</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>${artifactId}</artifactId>
+    <artifactId>test-webapp</artifactId>
     <name>Web Application</name>
     <description>Yet another incredible Tobacco application</description>
-    <version>${version}</version>
+    <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
 
@@ -19,7 +19,7 @@
             <properties>
                 <build.profile>production</build.profile>
                 <eclipselink.logging.level>WARNING</eclipselink.logging.level>
-                <log.level>INFO</log.level>
+                <log.level>WARN</log.level>
                 <spring.log.level>WARN</spring.log.level>
                 <service.log.level>WARN</service.log.level>
                 <serialization.log.level>WARN</serialization.log.level>
@@ -42,7 +42,7 @@
         <profile>
             <id>debug</id>
             <properties>
-                <build.profile>development</build.profile>
+                <build.profile>debug</build.profile>
                 <eclipselink.logging.level>FINE</eclipselink.logging.level>
                 <log.level>DEBUG</log.level>
                 <spring.log.level>DEBUG</spring.log.level>
@@ -56,24 +56,24 @@
         <tomcat.version>7.0.27</tomcat.version>
 
         <slf4j.version>1.7.2</slf4j.version>
-        <logback.version>1.0.7</logback.version>
+        <logback.version>1.0.9</logback.version>
 
         <jstl.version>1.2</jstl.version>
         <tiles.version>2.2.2</tiles.version>
-        <spring.version>3.1.3.RELEASE</spring.version>
-        <spring-security.version>3.1.3.RELEASE</spring-security.version>
-        <spring-mobile.version>1.0.0.RELEASE</spring-mobile.version>
-        <aspectj.version>1.6.12</aspectj.version>
-        <cglib.version>2.2.2</cglib.version>
-        <jackson.version>2.1.1</jackson.version>
-        <urlrewritefilter.version>3.2.0</urlrewritefilter.version>
+        <spring.version>3.2.0.RELEASE</spring.version>
+        <spring-security.version>3.2.0.M1</spring-security.version>
+        <spring-mobile.version>1.0.1.RELEASE</spring-mobile.version>
+        <aspectj.version>1.7.1</aspectj.version>
+        <cglib.version>3.0</cglib.version>
+        <jackson.version>2.1.2</jackson.version>
+        <urlrewritefilter.version>4.0.4</urlrewritefilter.version>
 
-        <eclipselink.version>2.4.0</eclipselink.version>
-        <hibernate-validator.version>4.3.0.Final</hibernate-validator.version>
+        <eclipselink.version>2.4.1</eclipselink.version>
+        <hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
 
         <junit.version>4.11</junit.version>
         <dbunit.version>2.4.9</dbunit.version>
-        <h2.version>1.3.168</h2.version>
+        <h2.version>1.3.170</h2.version>
 
         <commons.lang.version>2.6</commons.lang.version>
         <commons.collections.version>3.2.1</commons.collections.version>
@@ -81,9 +81,8 @@
         <joda.time.version>2.1</joda.time.version>
 
         <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
-        <aspectj.version>1.6.12</aspectj.version>
-        <jasperreports.version>4.7.0</jasperreports.version>
-        <groovy.version>1.8.6</groovy.version>
+        <jasperreports.version>5.0.0</jasperreports.version>
+        <groovy.version>2.0.5</groovy.version>
         <guava.version>13.0.1</guava.version>
         <thymeleaf.version>2.0.14</thymeleaf.version>
         <mail.version>1.4.5</mail.version>
@@ -105,6 +104,16 @@
             <artifactId>dbunit</artifactId>
             <version>${dbunit.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -125,12 +134,24 @@
             <artifactId>jul-to-slf4j</artifactId>
             <version>${slf4j.version}</version>
             <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${slf4j.version}</version>
             <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -141,6 +162,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -179,6 +206,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
             <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- optional spring instrument support, http://static.springsource.com/projects/instrumentation/instrument/html/ch02s05.html -->
@@ -196,6 +229,12 @@
             <groupId>org.springframework.mobile</groupId>
             <artifactId>spring-mobile-device</artifactId>
             <version>${spring-mobile.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-webmvc</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Spring Security -->
@@ -203,6 +242,41 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
             <version>${spring-security.version}</version>
+            <exclusions>
+                <!-- Spring deps -->
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-tx</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aop</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-expression</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -213,12 +287,65 @@
                     <groupId>commons-logging</groupId>
                     <artifactId>commons-logging</artifactId>
                 </exclusion>
+
+                <!-- Spring deps -->
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aop</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
             <version>${spring-security.version}</version>
+            <exclusions>
+                <!-- Spring deps -->
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-tx</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aop</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-expression</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Aspect/J version -->
@@ -245,6 +372,16 @@
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-jsp</artifactId>
             <version>${tiles.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-beanutils</groupId>
+                    <artifactId>commons-beanutils</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--  URL Rewrite -->
@@ -265,6 +402,12 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-joda</artifactId>
             <version>${jackson.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- EclipseLink JPA provider for ORM -->
