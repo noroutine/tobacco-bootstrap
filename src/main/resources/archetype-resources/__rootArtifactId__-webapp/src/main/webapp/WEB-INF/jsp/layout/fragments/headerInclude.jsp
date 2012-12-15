@@ -59,7 +59,7 @@
 </script>
 
 <%-- see ResourcesController --%>
-<util:js value="/resources.js"/>
+<util:js value="/resources.json"/>
 
 <c:choose>
     <c:when test="${symbol_dollar}{build_profile eq 'production'}">

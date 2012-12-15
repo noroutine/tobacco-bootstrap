@@ -1,3 +1,5 @@
+import java.util.Map;
+
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
@@ -89,7 +91,7 @@ public class ResourcesController {
         return resources;
     }
 
-    @RequestMapping("/resources.js")
+    @RequestMapping(value = "/resources", produces = "application/json")
     @ResponseBody
     @IfNoneMatch
     public JSONPObject getResources(Locale locale) {
