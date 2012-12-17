@@ -6,7 +6,7 @@
         <artifactId>${rootArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
-    <artifactId>${artifactId}-webapp</artifactId>
+    <artifactId>${artifactId}</artifactId>
     <name>Web Application</name>
     <description>Yet another incredible Tobacco application</description>
     <version>${version}</version>
