@@ -1,4 +1,21 @@
 /* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
  * http://benalman.com/
  * Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
-(function(a){var b=a({});a.subscribe=function(){b.on.apply(b,arguments)},a.unsubscribe=function(){b.off.apply(b,arguments)},a.publish=function(){b.trigger.apply(b,arguments)}})(jQuery);
+
+(function ($) {
+
+    var o = $({});
+
+    $.subscribe = function () {
+        o.on.apply(o, arguments);
+    };
+
+    $.unsubscribe = function () {
+        o.off.apply(o, arguments);
+    };
+
+    $.publish = function () {
+        o.trigger.apply(o, arguments);
+    };
+
+}(jQuery));
