@@ -618,7 +618,7 @@
                                 <include>vendor/modernizr-2.6.2.min.js</include>
 
                                 <include>vendor/jquery-1.8.3.min.js</include>
-                                <include>vendor/jquery.ba-tinypubsub.min.js</include>
+                                <include>vendor/jquery.tinypubsub.min.js</include>
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
                                 <!-- backbone.js -->

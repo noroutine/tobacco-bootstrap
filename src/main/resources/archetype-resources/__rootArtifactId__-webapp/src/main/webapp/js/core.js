@@ -8,8 +8,6 @@
  * @since 02.12.12
  */
 
-window.stopWatch = function(str) {
-
-};
+window.stopWatch = function(str) { };
 
 window.R = {};
