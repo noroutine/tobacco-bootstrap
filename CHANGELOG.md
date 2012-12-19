@@ -1,4 +1,10 @@
 # ChangeLog
+
+## 1.0.5 (19 Dec 2012)
+* Tiles 3.0.1
+* JRebel included by default
+* fixed JSONP issue with resources, removed doc junk from project template
+
 ## 1.0.3 (14 Dec 2012)
 * Spring 3.2
 * backbone.js 0.9.9
