@@ -14,7 +14,7 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
 
-<tiles:useAttribute name="view" id="selectedView"/>
+<tiles:importAttribute name="view" toName="selectedView" />
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">

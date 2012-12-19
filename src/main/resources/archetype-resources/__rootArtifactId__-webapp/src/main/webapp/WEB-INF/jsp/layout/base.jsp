@@ -66,7 +66,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <tiles:useAttribute name="title" id="title_code"/>
+    <tiles:importAttribute name="title" toName="title_code"/>
     <title><spring:message code="${symbol_dollar}{title_code}"/></title>
     <tiles:insertAttribute name="headerInclude"/>
 </head>

@@ -59,7 +59,7 @@
         <logback.version>1.0.9</logback.version>
 
         <jstl.version>1.2</jstl.version>
-        <tiles.version>2.2.2</tiles.version>
+        <tiles.version>3.0.1</tiles.version>
         <spring.version>3.2.0.RELEASE</spring.version>
         <spring-security.version>3.2.0.M1</spring-security.version>
         <spring-mobile.version>1.0.1.RELEASE</spring-mobile.version>
