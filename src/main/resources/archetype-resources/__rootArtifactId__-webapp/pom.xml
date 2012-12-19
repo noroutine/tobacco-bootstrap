@@ -609,7 +609,6 @@
                             <inputDir>${project.build.directory}/${project.build.finalName}/js</inputDir>
                             <output>${project.build.directory}/${project.build.finalName}/js/all.js</output>
                             <excludes>
-                                <exclude>vendor/dust-full-1.1.1.min.js</exclude>
                                 <exclude>pages/*</exclude>
                             </excludes>
                             <includes>
