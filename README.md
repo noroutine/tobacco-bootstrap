@@ -67,7 +67,7 @@ Now anytime you are ready to rock the world with new project:
     mvn archetype:generate                                      \
           -DarchetypeGroupId=me.noroutine                       \
           -DarchetypeArtifactId=tobacco-bootstrap               \
-          -DarchetypeVersion=1.0.5
+          -DarchetypeVersion=1.0.6
 
 now your project is generated, it is required to setup SCM. git is meant to be used.
     
