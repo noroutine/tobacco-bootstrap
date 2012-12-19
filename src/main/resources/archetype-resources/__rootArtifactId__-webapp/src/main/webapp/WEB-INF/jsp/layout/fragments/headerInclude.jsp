@@ -73,7 +73,7 @@
 
         <util:js value="/resources/js/vendor/jquery-1.8.3.js"/>
         <util:js value="/resources/js/vendor/jquery.ba-tinypubsub.js"/>
-        <util:js value="/resources/js/vendor/jquery.Storage.js"/>
+        <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
         <%-- Backbone.js --%>
         <util:js value="/resources/js/vendor/underscore-1.4.3.js" />
