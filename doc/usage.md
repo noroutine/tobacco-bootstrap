@@ -2,46 +2,112 @@
 
 # Usage
 
-Once you have cloned or downloaded HTML5 Boilerplate, creating a site or app
-usually involves the following:
+Using Tobacco is easy, but make sure you have at least Maven 3.0.4:
 
-1. Set up the basic structure of the site.
-2. Add some content, style, and functionality.
-3. Run your site locally to see how it looks.
-4. (Optionally run a build script to automate the optimization of your site -
-   e.g. [ant build script](https://github.com/h5bp/ant-build-script) or [node
-   build script](https://github.com/h5bp/node-build-script)).
-5. Deploy your site.
+    mvn archetype:generate                                      \
+          -DarchetypeGroupId=me.noroutine                       \
+          -DarchetypeArtifactId=tobacco-bootstrap               \
+          -DarchetypeVersion=1.0.6
+
+Example output (and values used for the rest of this page):
+
+    Define value for property 'groupId': : org.example
+    Define value for property 'artifactId': : coolapp
+    Define value for property 'version':  1.0-SNAPSHOT: :
+    Define value for property 'package':  org.example: :
+    Confirm properties configuration:
+    groupId: org.example
+    artifactId: coolapp
+    version: 1.0-SNAPSHOT
+    package: org.example
+     Y: : y
 
 
 ## Basic structure
 
-A basic HTML5 Boilerplate site initially looks something like this:
+A basic Tobacco webapp initially looks something like this:
 
 ```
 .
-├── css
-│   ├── main.css
-│   └── normalize.css
-├── doc
-├── img
-├── js
-│   ├── main.js
-│   ├── plugins.js
-│   └── vendor
-│       ├── jquery.min.js
-│       └── modernizr.min.js
-├── .htaccess
-├── 404.html
-├── index.html
-├── humans.txt
-├── robots.txt
-├── crossdomain.xml
-├── favicon.ico
-└── [apple-touch-icons]
+├── coolapp-commons
+│   └── pom.xml                                 - common classes to potentially share with other modules
+├── coolapp-webapp
+│   ├── pom.xml                                 - main webapp module
+│   └── src
+│       └── main
+│           ├── java/org/example
+│           │   ├── HomeController.java         - controller for /home
+│           │   └── [...]
+│           ├── resources
+│           │   ├── logback.xml                 - logback configuration
+│           │   ├── messages.properties         - main application message bundle
+│           │   └── [...]
+│           └── webapp
+│               ├── WEB-INF
+│               │   ├── jsp
+│               │   │   ├── errors              - here live your error pages
+│               │   │   │   └── 404.jsp         - 404 error page
+│               │   │   ├── layout              - here live your tiles
+│               │   │   │   ├── base.jsp        - base page layout
+│               │   │   │   └── fragments
+│               │   │   │       ├── navbar.jsp  - navigation bar
+│               │   │   │       └── [...]
+│               │   │   ├── templates           - here live your microtemplates
+│               │   │   │   └── empty.jsp       - not useful dust.js template
+│               │   │   └── views               - here live your views
+│               │   │       └── home.jsp        - home page
+│               │   ├── taglib                  - here live your TLDs
+│               │   │   └── taglib.tld          - example (but helpful) taglib placeholder
+│               │   ├── tags                    - here live your tagdirs
+│               │   │   └── util                - example (but helpgul) util tag(dir) library
+│               │   │       ├── css.tag         - tag for easy CSS inclusion
+│               │   │       ├── dust.tag        - tag for easy dust.js template inclusion
+│               │   │       └── js.tag          - tag for easy js inclusion
+│               │   ├── jdbc.properties         - JDBC connection properties
+│               │   ├── spring-security.xml     - spring security configuration file
+│               │   ├── spring.xml              - spring application context
+│               │   ├── spring-servlet.xml      - DispatcherServlet context
+│               │   ├── tiles-defs.xml          - Tiles configuration
+│               │   ├── urlrewrite.xml          - in-app URL redirects
+│               │   └── web.xml                 - J2EE webapp descriptor
+│               ├── css                         - place for your CSS files
+│               │   ├── main.css                - main application CSS
+│               │   └── vendor                  - Normalize and Bootstrap stylesheets
+│               │       └── [...]
+│               ├── img
+│               │   └── [...]                   - Bootstrap sprites and your images
+│               ├── js                          - place for your JS code
+│               │   ├── common.js               - random js stuff
+│               │   ├── compatibility.js        - some basic compatibility stuff
+│               │   ├── core.js                 - helpful for IDEA syntax inspection
+│               │   ├── pages                   - place for per-page js
+│               │   │   └── home.js             - home page script
+│               │   └── vendor                  - here live Backbone and friends
+│               │       └── [...]
+│               ├── [apple touch icons]         - a set of icons for mobile devices
+│               ├── favicon.ico                 - website icon
+│               ├── crossdomain.xml             - Adobe crossdomain policy file
+│               └── robots.txt                  - hello to indexing robots
+├── repository                                  - internal project MAven repository
+├── LICENSE.md                                  - license information
+├── atlassian-ide-plugin.xml                    - configuration for JIRA
+└── pom.xml                                     - root project POM
 ```
 
+
+Now you're ready to go:
+
+    cd coolapp/coolapp-webapp
+    mvn package t7:run
+
+Now you'll be ready to get your pages at <http://localhost:8080/coolapp>
+
 What follows is a general overview of each major part and how to use them.
+
+### repository
+
+This directory is an empty Maven repository, that is looked for artifacts.
+Often it is needed to keep custom or missing artifacts inside project tree
 
 ### css
 
@@ -49,47 +115,24 @@ This directory should contain all your project's CSS files. It includes some
 initial CSS to help get you started from a solid foundation. [About the
 CSS](css.md).
 
-### doc
-
-This directory contains all the HTML5 Boilerplate documentation. You can use it
-as the location and basis for your own project's documentation.
-
 ### js
 
 This directory should contain all your project's JS files. Libraries, plugins,
 and custom code can all be included here. It includes some initial JS to help
 get you started. [About the JavaScript](js.md).
 
-### .htaccess
-
-The default web server config is for Apache. [About the .htaccess](htaccess.md).
-
-Host your site on a server other than Apache? You're likely to find the
-corresponding configuration file in our [server configs
-repo](https://github.com/h5bp/server-configs). If you cannot find a
-configuration file for your setup, please consider contributing one so that
-others can benefit too.
-
-### 404.html
+### 404.jsp
 
 A helpful custom 404 to get you started.
 
-### index.html
+### home.jsp
 
 This is the default HTML skeleton that should form the basis of all pages on
-your site. If you are using a server-side templating framework, then you will
-need to integrate this starting HTML with your setup.
+your site.
 
-Make sure that you update the URLs for the referenced CSS and JavaScript if you
-modify the directory structure at all.
+### empty.jsp
 
-If you are using Google Analytics, make sure that you edit the corresponding
-snippet at the bottom to include your analytics ID.
-
-### humans.txt
-
-Edit this file to include the team that worked on your site/app, and the
-technology powering it.
+Empty dust.js template is a good start for future templates.
 
 ### robots.txt
 

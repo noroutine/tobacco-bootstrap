@@ -26,7 +26,7 @@ Client-side stuff
 * [Normalize.css 1.0.2](http://necolas.github.com/normalize.css/) for your app to look consistent
 * [jQuery 1.8.3](http://jquery.com/) for you to write less and do more
 * [Backbone.js 0.9.9](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
-* [Underscore.js 1.4.3](http://underscorejs.org/) to give you powerful common library
+* [LoDash.js 1.0.0rc3](http://underscorejs.org/) to give you powerful common library
 * [dust.js 1.1.1](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
 * [dust4j 0.1](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
