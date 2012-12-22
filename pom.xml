@@ -19,8 +19,8 @@
 
     <licenses>
         <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <name>Tobacco Bootstrap License</name>
+            <url>https://github.com/noroutine/tobacco-bootstrap/blob/master/LICENSE.md</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
