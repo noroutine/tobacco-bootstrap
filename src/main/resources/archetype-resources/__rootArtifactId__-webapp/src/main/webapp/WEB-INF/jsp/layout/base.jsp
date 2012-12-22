@@ -19,6 +19,38 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+    <%-- == Meta ================================================== --%>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none"/>
+    <meta name="author" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+
+    <%-- Place favicon.ico and apple-touch-icon.png in the webapps directory --%>
+    <link rel="icon" type="image/x-icon" href="${symbol_dollar}{base}/favicon.ico">
+
+    <util:js value="/resources/js/vendor/modernizr-2.6.2.js" />
+
+    <%-- https://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html --%>
+    <link rel="apple-touch-icon" href="${symbol_dollar}{base}/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="${symbol_dollar}{base}/apple-touch-icon-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="${symbol_dollar}{base}/apple-touch-icon-57x57-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${symbol_dollar}{base}/apple-touch-icon-72x72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${symbol_dollar}{base}/apple-touch-icon-114x114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${symbol_dollar}{base}/apple-touch-icon-144x144-precomposed.png"/>
+
+    <%--<link rel="apple-touch-startup-image" href="/startup.png">--%>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <tiles:importAttribute name="title" toName="title_code"/>
+    <title><spring:message code="${symbol_dollar}{title_code}"/></title>
+
     <%-- stopWatch for easy catch of bottlenecks --%>
     <script type="text/javascript">
         window.app_loadTime = window.icash_lastTime = new Date().getTime();
@@ -38,36 +70,6 @@
             window.app_prevLabel = label;
         };
     </script>
-
-    <%-- == Meta ================================================== --%>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Cache-Control" content="no-cache"/>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="none"/>
-    <meta name="author" content=""/>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-
-    <%-- Place favicon.ico and apple-touch-icon.png in the webapps directory --%>
-    <link rel="icon" type="image/x-icon" href="${symbol_dollar}{base}/favicon.ico">
-
-    <%-- https://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html --%>
-    <link rel="apple-touch-icon" href="${symbol_dollar}{base}/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon-precomposed" href="${symbol_dollar}{base}/apple-touch-icon-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="${symbol_dollar}{base}/apple-touch-icon-57x57-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${symbol_dollar}{base}/apple-touch-icon-72x72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${symbol_dollar}{base}/apple-touch-icon-114x114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${symbol_dollar}{base}/apple-touch-icon-144x144-precomposed.png"/>
-
-    <%--<link rel="apple-touch-startup-image" href="/startup.png">--%>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-    <tiles:importAttribute name="title" toName="title_code"/>
-    <title><spring:message code="${symbol_dollar}{title_code}"/></title>
     <tiles:insertAttribute name="headerInclude"/>
 </head>
 <body>

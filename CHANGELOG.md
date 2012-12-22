@@ -4,8 +4,9 @@
 * replace underscore.js with lodash <http://lodash.com/>
 * aggregate licenses to single file
 * remove minified versions of js and css, now we solely rely on yui compressor
-* change Apple site mode from black to default
+* change Apple site mode from black to default, as black is not what you normally want, even if it looks so ;)
 * removed weak Id function, in favor of _.uniqueId
+* fixed messages.properties
 
 ## 1.0.6 (19 Dec 2012)
 * Tiles 3.0.1

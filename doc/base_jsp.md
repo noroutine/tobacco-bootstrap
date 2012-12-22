@@ -1,7 +1,6 @@
-[HTML5 Boilerplate homepage](http://html5boilerplate.com) | [Documentation
-table of contents](TOC.md)
+[Tobacco Docs](https://github.com/noroutine/tobacco-bootstrap/blob/master/doc/TOC.md)
 
-# The HTML
+# base.jsp
 
 ## Conditional `html` classes
 

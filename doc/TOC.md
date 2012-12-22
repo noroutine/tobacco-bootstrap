@@ -1,15 +1,20 @@
 [HTML5 Boilerplate homepage](http://html5boilerplate.com)
 
-# HTML5 Boilerplate documentation:
+# Tobacco Documentation
 
 ## Getting started
 
 * [Usage](usage.md) — Overview of the project contents.
 * [FAQ](faq.md) — Frequently asked questions, along with their answers.
 
+
+## Tobacco Tiles Layout
+A guide to the default Tiles layout.
+* [base.jsp](base_jsp.md) — base code for all pages
+* [navbar.jsp](navbar_jsp.md) — navigation bar
+
 ## The core of HTML5 Boilerplate
 
-* [HTML](html.md) — A guide to the default HTML.
 * [CSS](css.md) — A guide to the default CSS.
 * [JavaScript](js.md) — A guide to the default JavaScript.
 * [.htaccess](htaccess.md) — All about the Apache web server config (also see
