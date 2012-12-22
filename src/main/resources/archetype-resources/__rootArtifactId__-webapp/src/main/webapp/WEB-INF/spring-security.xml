@@ -10,6 +10,11 @@
 
     <global-method-security proxy-target-class="true" pre-post-annotations="enabled" secured-annotations="enabled" />
 
+    <http pattern="/robots.txt" security="none"/>
+    <http pattern="/crossdomain.xml" security="none"/>
+    <http pattern="/favicon.ico" security="none"/>
+    <http pattern="/apple-touch-*.png" security="none"/>
+
     <http pattern="/resources/**" security="none"/>
 
     <http pattern="/resources.json" security="none"/>
