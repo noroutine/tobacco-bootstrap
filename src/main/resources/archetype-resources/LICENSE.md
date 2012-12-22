@@ -1,4 +1,6 @@
-# ${groupId}:${artifactId} ${version} Tobacco Application
+#set( $h1 = '#' )
+#set( $h2 = '##' )
+${h1} ${groupId}:${artifactId} ${version} Tobacco Application
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -23,7 +25,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 This software is built on a number of other components, kindly licensed to you by various people
 
-## Tobacco Bootstrap
+${h2} Tobacco Bootstrap
 Copyright (c) 2012 Oleksii Khilkevych, Noroutine
 
 Permission is hereby granted, free of charge, to any person
@@ -49,7 +51,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://tobacco.noroutine.me>
 
-## Backbone.js 0.9.9
+${h2} Backbone.js 0.9.9
 Copyright (c) 2010-2012 Jeremy Ashkenas, DocumentCloud
 
 Permission is hereby granted, free of charge, to any person
@@ -75,7 +77,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://backbonejs.org>
 
-## Twitter Bootstrap 2.2.2
+${h2} Twitter Bootstrap 2.2.2
 Copyright 2012 Twitter, Inc.
 
 Designed and built with all the love in the world @twitter by @mdo and @fat.
@@ -94,7 +96,7 @@ limitations under the License.
 
 <http://twitter.github.com/bootstrap/>
 
-## jQuery JavaScript Library v1.8.3
+${h2} jQuery JavaScript Library v1.8.3
 Copyright 2012 jQuery Foundation and other contributors
 http://jquery.com/
 
@@ -119,7 +121,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <http://jquery.com/>
 
-## Sizzle CSS Selector Engine
+${h2} Sizzle CSS Selector Engine
 Copyright 2012 jQuery Foundation and other contributors
 http://jquery.com/
 
@@ -144,7 +146,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <http://sizzlejs.com/>
 
-## jQuery Tiny Pub/Sub 0.7
+${h2} jQuery Tiny Pub/Sub 0.7
 Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL.
 MIT was chosen for this project
 
@@ -169,7 +171,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <http://benalman.com/>
 
-## jStorage
+${h2} jStorage
 Copyright (c) 2010 - 2012 Andris Reinman, andris.reinman@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -189,7 +191,7 @@ SOFTWARE.
 
 <http://www.jstorage.info/>
 
-## Lo-Dash 1.0.0-rc.3
+${h2} Lo-Dash 1.0.0-rc.3
 (c) 2012 John-David Dalton <http://allyoucanleet.com/>
 Available under MIT license <http://lodash.com/license>
 Based on Underscore.js 1.4.3, copyright © 2009-2012 Jeremy Ashkenas, DocumentCloud Inc. <http://documentcloud.github.com/underscore>
@@ -211,7 +213,7 @@ SOFTWARE.
 
 <http://lodash.com>
 
-## Underscore.js 1.4.3
+${h2} Underscore.js 1.4.3
 Copyright (c) 2009-2012 Jeremy Ashkenas, DocumentCloud
 
 Permission is hereby granted, free of charge, to any person
@@ -237,7 +239,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://underscorejs.org>
 
-## Modernizr v2.6.2
+${h2} Modernizr v2.6.2
 Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
 Available under the BSD and MIT licenses. For this project MIT was chosen.
 
@@ -264,7 +266,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://www.modernizr.com/>
 
-## dust.js - Asynchronous Templating v1.1.1
+${h2} dust.js - Asynchronous Templating v1.1.1
 Copyright (c) 2010, Aleksander Williams
 
 Permission is hereby granted, free of charge, to any person
@@ -290,7 +292,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://akdubya.github.com/dustjs>
 
-## Dust Helpers - Additional functionality for dust.js v1.1.0
+${h2} Dust Helpers - Additional functionality for dust.js v1.1.0
 Copyright (c) 2012, LinkedIn
 
 Permission is hereby granted, free of charge, to any person
@@ -316,7 +318,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://linkedin.github.com/dustjs>
 
-## HTML5 Shiv v3.6.1
+${h2} HTML5 Shiv v3.6.1
 @afarkas @jdalton @jon_neal @rem
 MIT/GPL2 Licensed, MIT was chosen for this project
 
@@ -343,7 +345,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <https://github.com/aFarkas/html5shiv>
 
-## Normalize.css 1.0.2
+${h2} Normalize.css 1.0.2
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -366,7 +368,7 @@ SOFTWARE.
 
 <http://git.io/normalize>
 
-## HTML5 Boilerplate 4.0.2
+${h2} HTML5 Boilerplate 4.0.2
 Copyright (c) HTML5 Boilerplate
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
