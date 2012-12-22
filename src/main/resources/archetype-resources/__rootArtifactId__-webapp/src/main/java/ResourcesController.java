@@ -23,11 +23,6 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/**
- * @author Oleksii Khilkevych
- * @since 02.12.12
- */
-
 @Controller
 public class ResourcesController {
 
