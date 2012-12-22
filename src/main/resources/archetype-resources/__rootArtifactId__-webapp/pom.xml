@@ -621,7 +621,7 @@
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
                                 <!-- backbone.js -->
-                                <include>vendor/underscore-1.4.3.min.js</include>
+                                <include>vendor/lodash-1.0.0rc3.min.js</include>
                                 <include>vendor/backbone-0.9.9.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->

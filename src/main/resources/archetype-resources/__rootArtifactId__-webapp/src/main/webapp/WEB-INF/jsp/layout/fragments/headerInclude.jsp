@@ -76,7 +76,7 @@
         <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
         <%-- Backbone.js --%>
-        <util:js value="/resources/js/vendor/underscore-1.4.3.js" />
+        <util:js value="/resources/js/vendor/lodash-1.0.0rc3.js" />
         <util:js value="/resources/js/vendor/backbone-0.9.9.js" />
 
         <%-- Dust.js --%>

@@ -30,14 +30,6 @@ function randomUUID() {
 }
 
 /**
- * Generate 5-char random string
- * @return {String}
- */
-function weakRandomID() {
-    return Math.random().toString(36).substring(2,7);
-}
-
-/**
  *
  *  Base64 encode / decode
  *  @see http://www.webtoolkit.info/
