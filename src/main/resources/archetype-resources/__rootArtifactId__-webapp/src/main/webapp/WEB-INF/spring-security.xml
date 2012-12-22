@@ -16,8 +16,17 @@
 
     <http pattern="/error/**" security="none"/>
 
-    <http pattern="/**" use-expressions="true">
-        <intercept-url pattern="/home" access="isAnonymous()"/>
+    <http pattern="/home" security="none"/>
+
+    <http pattern="/**" auto-config="true" use-expressions="true">
         <intercept-url pattern="/*" access="isAuthenticated()"/>
     </http>
+
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN"/>
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
 </beans:beans>

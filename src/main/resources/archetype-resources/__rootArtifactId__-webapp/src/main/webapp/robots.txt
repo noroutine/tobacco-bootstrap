@@ -1,6 +1,6 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-${symbol_pound} robotstxt.org/
+${symbol_pound} http://robotstxt.org/
 
 User-agent: *
