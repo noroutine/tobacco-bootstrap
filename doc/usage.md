@@ -121,6 +121,15 @@ This directory should contain all your project's JS files. Libraries, plugins,
 and custom code can all be included here. It includes some initial JS to help
 get you started. [About the JavaScript](js.md).
 
+### base.jsp
+
+Main page template.
+
+### navbar.jsp
+
+navbar.jsp includes the HTML code for application's navigation bar. navbar.jsp is
+included in base.jsp with help of Tiles.
+
 ### 404.jsp
 
 A helpful custom 404 to get you started.
