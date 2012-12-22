@@ -14,6 +14,7 @@
         <fileSet filtered="true" encoding="UTF-8">
             <directory></directory>
             <includes>
+                <include>LICENSE.md</include>
                 <include>atlassian-ide-plugin.xml</include>
             </includes>
         </fileSet>
@@ -21,7 +22,6 @@
             <directory></directory>
             <includes>
                 <include>.gitignore</include>
-                <include>LICENSE.md</include>
                 <include>README.md</include>
             </includes>
         </fileSet>

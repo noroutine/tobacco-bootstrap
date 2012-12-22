@@ -64,7 +64,7 @@
 
     <%--<link rel="apple-touch-startup-image" href="/startup.png">--%>
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <tiles:importAttribute name="title" toName="title_code"/>
     <title><spring:message code="${symbol_dollar}{title_code}"/></title>

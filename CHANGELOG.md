@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.0.7 (22 Dec 2012)
+* replace underscore.js with lodash <http://lodash.com/>
+* aggregate licenses to single file
+* remove minified versions of js and css, now we solely rely on yui compressor
+
 ## 1.0.6 (19 Dec 2012)
 * Tiles 3.0.1
 * JRebel included by default
