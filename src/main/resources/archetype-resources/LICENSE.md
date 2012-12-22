@@ -23,7 +23,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 This software is built on a number of other components, kindly licensed to you by various people
 
-## Tobacco Bootstrap <http://tobacco.noroutine.me>
+## Tobacco Bootstrap
 Copyright (c) 2012 Oleksii Khilkevych, Noroutine
 
 Permission is hereby granted, free of charge, to any person
@@ -47,7 +47,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-## Backbone.js 0.9.9 <http://backbonejs.org>
+<http://tobacco.noroutine.me>
+
+## Backbone.js 0.9.9
 Copyright (c) 2010-2012 Jeremy Ashkenas, DocumentCloud
 
 Permission is hereby granted, free of charge, to any person
@@ -71,7 +73,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-## Twitter Bootstrap 2.2.2 <http://twitter.github.com/bootstrap/>
+<http://backbonejs.org>
+
+## Twitter Bootstrap 2.2.2
 Copyright 2012 Twitter, Inc.
 
 Designed and built with all the love in the world @twitter by @mdo and @fat.
@@ -88,7 +92,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-## jQuery JavaScript Library v1.8.3 <http://jquery.com/>
+<http://twitter.github.com/bootstrap/>
+
+## jQuery JavaScript Library v1.8.3
 Copyright 2012 jQuery Foundation and other contributors
 http://jquery.com/
 
@@ -111,7 +117,9 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Sizzle CSS Selector Engine <http://sizzlejs.com/>
+<http://jquery.com/>
+
+## Sizzle CSS Selector Engine
 Copyright 2012 jQuery Foundation and other contributors
 http://jquery.com/
 
@@ -134,7 +142,9 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## jQuery Tiny Pub/Sub 0.7 <http://benalman.com/>
+<http://sizzlejs.com/>
+
+## jQuery Tiny Pub/Sub 0.7
 Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL.
 MIT was chosen for this project
 
@@ -157,7 +167,9 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## jStorage <http://www.jstorage.info/>
+<http://benalman.com/>
+
+## jStorage
 Copyright (c) 2010 - 2012 Andris Reinman, andris.reinman@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -175,7 +187,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Lo-Dash 1.0.0-rc.3 <http://lodash.com>
+<http://www.jstorage.info/>
+
+## Lo-Dash 1.0.0-rc.3
 (c) 2012 John-David Dalton <http://allyoucanleet.com/>
 Available under MIT license <http://lodash.com/license>
 Based on Underscore.js 1.4.3, copyright © 2009-2012 Jeremy Ashkenas, DocumentCloud Inc. <http://documentcloud.github.com/underscore>
@@ -195,7 +209,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Underscore.js 1.4.3 <http://underscorejs.org>
+<http://lodash.com>
+
+## Underscore.js 1.4.3
 Copyright (c) 2009-2012 Jeremy Ashkenas, DocumentCloud
 
 Permission is hereby granted, free of charge, to any person
@@ -219,11 +235,15 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-## Modernizr v2.6.2 <http://www.modernizr.com/>
+<http://underscorejs.org>
+
+## Modernizr v2.6.2
 Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
 Available under the BSD and MIT licenses: www.modernizr.com/license/
 
-## dust.js - Asynchronous Templating v1.1.1 <http://akdubya.github.com/dustjs>
+<http://www.modernizr.com/>
+
+## dust.js - Asynchronous Templating v1.1.1
 Copyright (c) 2010, Aleksander Williams
 
 Permission is hereby granted, free of charge, to any person
@@ -246,6 +266,8 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+<http://akdubya.github.com/dustjs>
 
 ## Dust Helpers - Additional functionality for dust.js v1.1.0
 Copyright (c) 2012, LinkedIn
@@ -271,7 +293,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-## HTML5 Shiv v3.6.1 <https://github.com/aFarkas/html5shiv>
+<http://linkedin.github.com/dustjs>
+
+## HTML5 Shiv v3.6.1
 @afarkas @jdalton @jon_neal @rem
 MIT/GPL2 Licensed, MIT was chosen for this project
 
@@ -296,7 +320,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-## Normalize.css 1.0.2 <http://git.io/normalize>
+<https://github.com/aFarkas/html5shiv>
+
+## Normalize.css 1.0.2
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -317,7 +343,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## HTML5 Boilerplate 4.0.2 <http://html5boilerplate.com/>
+<http://git.io/normalize>
+
+## HTML5 Boilerplate 4.0.2
 Copyright (c) HTML5 Boilerplate
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -337,3 +365,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+<http://html5boilerplate.com/>
