@@ -1,4 +1,4 @@
-[Tobacco Docs](https://github.com/noroutine/tobacco-bootstrap/blob/master/doc/TOC.md)
+[Tobacco Docs](TOC.md)
 
 # navbar.jsp
 

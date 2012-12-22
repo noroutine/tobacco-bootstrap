@@ -1,7 +1,3 @@
-[HTML5 Boilerplate homepage](http://html5boilerplate.com)
-
-# Tobacco Documentation
-
 ## Getting started
 
 * [Usage](usage.md) — Overview of the project contents.
