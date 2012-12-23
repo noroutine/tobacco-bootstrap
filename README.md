@@ -53,19 +53,12 @@ How to use
 ----------
 _Make sure you have the latest Maven installed, at least version 3.0.4 is required_
 
-Normally you don't need to install Tobacco, but in case you want to work with development version, follow thes instructions.
+Starting from 1.0.8, the generation of Tobacco projects is super-simple one-liner
+Anytime you are ready to rock the world with new project:
 
-    git clone git://github.com/noroutine/tobacco-bootstrap.git
-    cd tobacco-bootstrap
-    mvn install
+    mvn me.noroutine:tobacco:generate
 
-Now anytime you are ready to rock the world with new project:
-
-    mvn archetype:generate                                      \
-          -DarchetypeGroupId=me.noroutine                       \
-          -DarchetypeArtifactId=tobacco-bootstrap               \
-          -DarchetypeVersion=1.0.7
-
+This will automatically use the latest Tobacco Bootstrap version found in Maven Central
 now your project is generated, it is required to setup SCM. git is meant to be used.
     
     cd <app-name>
@@ -79,6 +72,20 @@ Now you're ready to go:
     mvn package t7:run
 
 after few minutes of terrifying console output, you can hope to access your new app at `http://localhost:8080/<app-name>`
+
+### Can that be made even shorter?
+
+Yes. With some extra configuration, you can save yourself from typing plugin groupId (me.noroutine). To do this, you
+need to add me.noroutine to pluginGroups list in your `settings.xml` file:
+
+    <!-- Somewhere in ~/.m2/settings.xml -->
+    <pluginGroups>
+        <pluginGroup>me.noroutine</pluginGroup>
+    </pluginGroups>
+
+After this you will be able to generate projects with a no-brainer:
+
+    mvn tobacco:generate
 
 What if I don't need TB?
 ------------------------
