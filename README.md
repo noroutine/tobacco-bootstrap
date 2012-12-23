@@ -32,6 +32,7 @@ Client-side stuff
 
 Server-side stuff
 * [Spring 3.2](http://www.springsource.org/) for wiring your components
+* [Spring Security 3.2.0M1]](http://www.springsource.org/) for your app to be secure
 * [Tiles 3.0.1](http://tiles.apache.org/) to organize your views
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. 
@@ -42,24 +43,30 @@ There is some dozen of other smaller and less important stuff that you find addi
 * [ResourceController](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java) automatically exposes your i18n resources to JS so you can reuse them
 * [@IfNoneMatch](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java) annotation lets you make your responses cacheable by browser
 
-About JPA and database access
+About JPA, database access and security
 -----------------------------
 
-I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill to require full-blown JPA persistence and/or ORM mapping for any project. If you need it - you can still set it up though.
+I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app.
+It's not cool and overkill to require full-blown JPA persistence and/or ORM mapping for any project.
+If you need it - you can still set it up though.
 
-All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start. 
+All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start.
+
+As for security, there is simple form authentication workflow setup with single user, just to give you something to start with.
+That way you can use home page for experiments and for more serious work you have boring stuff done for you already.
 
 How to use
 ----------
 _Make sure you have the latest Maven installed, at least version 3.0.4 is required_
 
-Starting from 1.0.8, the generation of Tobacco projects is super-simple one-liner
+Starting from 1.0.8, the generation of Tobacco projects is super-simple one-liner.
 Anytime you are ready to rock the world with new project:
 
     mvn me.noroutine:tobacco:generate
 
-This will automatically use the latest Tobacco Bootstrap version found in Maven Central
-now your project is generated, it is required to setup SCM. git is meant to be used.
+This will automatically use the latest Tobacco Bootstrap version found in Maven Central.
+
+Now your project is generated, it is required to setup SCM. git is meant to be used (.gitignore is already there for you).
     
     cd <app-name>
     git init
@@ -87,8 +94,19 @@ After this you will be able to generate projects with a no-brainer:
 
     mvn tobacco:generate
 
-What if I don't need TB?
-------------------------
+After that, you still need to setup git.
+
+### Is it really obligatory to use Git?
+
+No. You can use SVN, or even go ahead without SCM. In SVN case, you will need to setup <scm /> section in pom.xml.
+In case you decide to go ahead without SCM, the project will still run, but browser resource caching may not work
+quite as expected. This is because source code revision is used for checking ETag. so make sure to clean your cache
+if your code is not being executed.
+
+The reason to use Git is it can be setup without central repository or internet.
+
+### What if I don't need TB?
+
 Work of H5BP and TB was combined and Bootstrap is used by default, but
 you can still easily fallback and use plain H5BP if you don't intend to use TB
 
@@ -102,17 +120,11 @@ Project generated from Tobacco Bootstrap has three profiles:
 
 Switch between them from your IDE, or in command-line add `-P<profile>` as option to `mvn`
 
-Build Versioning
-----------------
-
-For generated projects to run, they should be versioned by Git (preferred) or any other SCM.
-
 Thanks
 ------
 
-Thanks to H5BP and TB guys. You're the best and I just love you!
+Thanks to [H5BP](http://html5boilerplate.com/) and [TB](http://twitter.github.com/bootstrap/) guys. You're the best and I just love you!
 
-Thanks to GitHub, your service is awesome.
+Thanks to [GitHub](https://github.com/) and [Sonatype](https://oss.sonatype.org/index.html), your service is awesome.
 
-Thanks to Maven guys, you simply rock, but please can you make mvn less verbose by default ;)
-
+Thanks to Maven guys, you made this possible (http://maven.apache.org/).
