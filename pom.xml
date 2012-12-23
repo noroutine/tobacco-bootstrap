@@ -11,7 +11,7 @@
 
     <groupId>me.noroutine</groupId>
     <artifactId>tobacco-bootstrap</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9-SNAPSHOT</version>
     <name>tobacco-bootstrap</name>
     <description>Web Application with all modern client libraries</description>
     <url>http://tobacco.noroutine.me/</url>
