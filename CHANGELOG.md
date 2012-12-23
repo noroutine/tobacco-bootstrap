@@ -1,5 +1,7 @@
 # ChangeLog
 
+## 1.0.8 (TBD)
+
 ## 1.0.7 (23 Dec 2012)
 * replace underscore.js with lodash <http://lodash.com/>
 * add Spring Security config, with TB-style form for easier security start
