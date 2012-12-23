@@ -10,5 +10,6 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
+<%@ taglib prefix="tb" uri="/WEB-INF/taglib/taglib.tld" %>
 
 <%-- Emppty dust.js template --%>

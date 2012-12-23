@@ -13,7 +13,7 @@ import java.security.Principal;
 public class HomeController {
 
     @RequestMapping("/admin")
-    public String contact(Principal principal, Model model) {
+    public String adminHome(Principal principal, Model model) {
         model.addAttribute("username", principal.getName());
         return "view.admin";
     }

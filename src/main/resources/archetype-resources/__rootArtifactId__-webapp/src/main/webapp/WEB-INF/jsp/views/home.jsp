@@ -10,6 +10,7 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
+<%@ taglib prefix="tb" uri="/WEB-INF/taglib/taglib.tld" %>
 
 <h1>Bootstrap starter template</h1>
 <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>

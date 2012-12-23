@@ -47,6 +47,9 @@
     <bean name="/login" parent="directViewMapping" p:viewName="view.login" />
     <bean name="/contact" parent="directViewMapping" p:viewName="view.contact" />
 
+    <bean name="/error/404" parent="directViewMapping" p:viewName="error.404" />
+    <bean name="/error/*" parent="directViewMapping" p:viewName="error.general" />
+
     <bean id="messageSource" class="${package}.util.ReloadableMessageSource">
         <property name="cacheSeconds" value="5"/>
         <property name="defaultEncoding" value="UTF-8"/>
