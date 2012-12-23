@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 public @interface IfNoneMatch {
     /**
-     * ${parentArtifactId}: SpEL expression to calculate ETag value
+     * TODO: SpEL expression to calculate ETag value
      * @return ETag for request
      */
     String value() default "";
