@@ -8,7 +8,7 @@
 * change Apple site mode from black to default, as black is not what you normally want, even if it looks so ;)
 * removed weak Id function, in favor of _.uniqueId
 * fixed messages.properties duplicates
-* updated docs
+* updated docs a bit
 * added generic error page with nice 500 stacktrace output
 * got rid of trivial mappings in favor of org.springframework.web.servlet.mvc.ParameterizableViewController
 * more error handler entries for 4xx error codes added by default
