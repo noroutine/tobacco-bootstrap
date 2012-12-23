@@ -1,9 +1,4 @@
 /**
- * @author Oleksii Khilkevych
- * @since 17.09.12
- */
-
-/**
  * Generate UUID
  * @see http://www.broofa.com/blog/?p=151
  * @return {String}

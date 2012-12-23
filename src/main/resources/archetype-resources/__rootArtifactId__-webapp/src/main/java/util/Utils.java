@@ -1,3 +1,4 @@
+
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
@@ -6,11 +7,6 @@ package ${package}.util;
 import org.apache.commons.collections.iterators.IteratorChain;
 
 import java.util.Iterator;
-
-/**
- * @author Oleksii Khilkevych
- * @since 02.12.12
- */
 
 public class Utils {
     public static class IterableIterator<T> implements Iterable<T> {

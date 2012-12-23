@@ -12,11 +12,6 @@ import java.beans.PropertyEditorSupport;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * @author Oleksii Khilkevych
- * @since 16.10.12
- */
-
 public class ServletContextResourceReaderPropertyEditor extends PropertyEditorSupport implements ServletContextAware {
 
     private ServletContext servletContext;

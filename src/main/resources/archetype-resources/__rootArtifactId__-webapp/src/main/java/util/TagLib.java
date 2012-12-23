@@ -3,11 +3,6 @@
 #set( $symbol_escape = '\' )
 package ${package}.util;
 
-/**
- * @author Oleksii Khilkevych
- * @since 07.12.12
- */
-
 public class TagLib {
 
     public static String minifiedJS(String url) {
