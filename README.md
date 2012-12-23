@@ -34,9 +34,10 @@ Server-side stuff
 * [Spring 3.2](http://www.springsource.org/) for wiring your components
 * [Tiles 3.0.1](http://tiles.apache.org/) to organize your views
 
-There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient. 
+There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. 
 
-* [common.js](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js) adds UUID, weak ID and Base64 support among other things
+* serialize model objects to JSON right in your JSP with special tag, allows to easily bootstrap Backbone models 
+* [common.js](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js) adds UUID and Base64 support among other things
 * [ResourceController](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java) automatically exposes your i18n resources to JS so you can reuse them
 * [@IfNoneMatch](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java) annotation lets you make your responses cacheable by browser
 
