@@ -1,6 +1,7 @@
 # ChangeLog
 
 ## 1.0.8 (TBD)
+* scripts moved to the end of the page to speed up page rendering
 
 ## 1.0.7 (23 Dec 2012)
 * replace underscore.js with lodash <http://lodash.com/>
