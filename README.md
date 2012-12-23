@@ -43,18 +43,6 @@ There is some dozen of other smaller and less important stuff that you find addi
 * [ResourceController](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java) automatically exposes your i18n resources to JS so you can reuse them
 * [@IfNoneMatch](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java) annotation lets you make your responses cacheable by browser
 
-About JPA, database access and security
------------------------------
-
-I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app.
-It's not cool and overkill to require full-blown JPA persistence and/or ORM mapping for any project.
-If you need it - you can still set it up though.
-
-All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start.
-
-As for security, there is simple form authentication workflow setup with single user, just to give you something to start with.
-That way you can use home page for experiments and for more serious work you have boring stuff done for you already.
-
 How to use
 ----------
 _Make sure you have the latest Maven installed, at least version 3.0.4 is required_
@@ -109,6 +97,17 @@ The reason to use Git is it can be setup without central repository or internet.
 
 Work of H5BP and TB was combined and Bootstrap is used by default, but
 you can still easily fallback and use plain H5BP if you don't intend to use TB
+
+### About JPA, database access and security
+
+I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app.
+It's not cool and overkill to require full-blown JPA persistence and/or ORM mapping for any project.
+If you need it - you can still set it up though.
+
+All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start.
+
+As for security, there is simple form authentication workflow setup with single user, just to give you something to start with.
+That way you can use home page for experiments and for more serious work you have boring stuff done for you already.
 
 Profiles
 --------
