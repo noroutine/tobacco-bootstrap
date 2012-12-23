@@ -44,7 +44,7 @@ There is some dozen of other smaller and less important stuff that you find addi
 About JPA and database access
 -----------------------------
 
-I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill and just narrow-minded to require database for any project. If you need it - you can still set it up though.
+I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill to require full-blown JPA persistence and/or ORM mapping for any project. If you need it - you can still set it up though.
 
 All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start. 
 
