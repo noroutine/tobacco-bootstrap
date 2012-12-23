@@ -14,15 +14,15 @@
 
 <spring:url value="/j_spring_security_check" var="security_check_url" />
 
-<c:set var="authException" value="$symbol_dollar{sessionScope['SPRING_SECURITY_LAST_EXCEPTION']}" />
+<c:set var="authException" value="${symbol_dollar}{sessionScope['SPRING_SECURITY_LAST_EXCEPTION']}" />
 
-<form action='$symbol_dollar{security_check_url}' method='post' class="form-horizontal">
+<form action='${symbol_dollar}{security_check_url}' method='post' class="form-horizontal">
     <fieldset>
         <legend>Login with Username and Password</legend>
-        <c:if test="$symbol_dollar{not empty authException}">
+        <c:if test="${symbol_dollar}{not empty authException}">
         <div class="control-group">
             <div class="controls">
-                <p class="text-error">Sign-in failed: $symbol_dollar{fn:toLowerCase(authException.message)}</p>
+                <p class="text-error">Sign-in failed: ${symbol_dollar}{fn:toLowerCase(authException.message)}</p>
             </div>
         </div>
         </c:if>

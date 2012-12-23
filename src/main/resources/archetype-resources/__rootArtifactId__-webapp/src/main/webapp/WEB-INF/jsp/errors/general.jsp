@@ -16,8 +16,8 @@
     <h1>Oops!</h1>
     <p class="lead">Terrible things happened... We are sorry...</p>
 
-    <c:if test="$symbol_dollar{pageContext.errorData.statusCode eq 500}">
+    <c:if test="${symbol_dollar}{pageContext.errorData.statusCode eq 500}">
         <h3>Stacktrace</h3>
-        <pre style="font-size: 75%;">$symbol_dollar{tb:getFullStackTrace(pageContext.exception)}</pre>
+        <pre style="font-size: 75%;">${symbol_dollar}{tb:getFullStackTrace(pageContext.exception)}</pre>
     </c:if>
 </div>
