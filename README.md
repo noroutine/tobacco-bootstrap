@@ -1,5 +1,5 @@
 [Tobacco Bootstrap](http://noroutine.github.com/tobacco-bootstrap)
-=================
+==================
 
 HTML5 Java web app archetype with latest and gratest components.
 
@@ -15,7 +15,7 @@ Demo
 Real website is worth thousands of words, so I setup [Tobacco Demo](http://zion.noroutine.me:8080/tobacco-demo) for you to check.
 
 What's inside
-------------
+-------------
 
 All components are of latest versions. I'll continue to update this archetype with latest versions.
 
@@ -36,7 +36,8 @@ Server-side stuff
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. 
 
-* serialize model objects to JSON right in your JSP with special tag, allows to easily bootstrap Backbone models 
+* serialize model objects to JSON right in your JSP with special tag, allows to easily bootstrap Backbone models
+* automatic compression and aggregation of JS and CSS
 * [common.js](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/webapp/js/common.js) adds UUID and Base64 support among other things
 * [ResourceController](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/ResourcesController.java) automatically exposes your i18n resources to JS so you can reuse them
 * [@IfNoneMatch](https://github.com/noroutine/tobacco-demo/blob/master/tobacco-demo-webapp/src/main/java/me/noroutine/cache/IfNoneMatch.java) annotation lets you make your responses cacheable by browser
@@ -47,11 +48,6 @@ About JPA and database access
 I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill to require full-blown JPA persistence and/or ORM mapping for any project. If you need it - you can still set it up though.
 
 All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start. 
-
-Work of H5BP and TB was combined and Bootstrap is used by default, but you can still easily fallback and use plain H5BP if you don't intemd to use TB.
-That means that all the stuff from H5BP is still provided for you to benefit from professional comments, I tried to be as consistent as possible with original works.
-
-All scripts have their minified versions present. JS and CSS is automatically compressed and aggregated if you use production profile. 
 
 How to use
 ----------
@@ -68,19 +64,26 @@ Now anytime you are ready to rock the world with new project:
     mvn archetype:generate                                      \
           -DarchetypeGroupId=me.noroutine                       \
           -DarchetypeArtifactId=tobacco-bootstrap               \
-          -DarchetypeVersion=1.0.6
+          -DarchetypeVersion=1.0.7
 
 now your project is generated, it is required to setup SCM. git is meant to be used.
     
     cd <app-name>
     git init
+    git add -A
+    git commit -a -m 'initial commit'
 
 Now you're ready to go:
 
     cd <app-name>-webapps
     mvn package t7:run
 
-after few minutes of terrifying console output, you can hope to access your new app at http://localhost:8080/<app-name>
+after few minutes of terrifying console output, you can hope to access your new app at `http://localhost:8080/<app-name>`
+
+What if I don't need TB?
+------------------------
+Work of H5BP and TB was combined and Bootstrap is used by default, but
+you can still easily fallback and use plain H5BP if you don't intend to use TB
 
 Profiles
 --------
@@ -90,7 +93,7 @@ Project generated from Tobacco Bootstrap has three profiles:
 * production - minified versions of JS and CSS are used, only errors are logged
 * debug - same as development, but maximum logging
 
-Switch beetween them from your IDE, or in command-line add `-P<profile>` as option to `mvn`
+Switch between them from your IDE, or in command-line add `-P<profile>` as option to `mvn`
 
 Build Versioning
 ----------------
