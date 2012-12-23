@@ -53,7 +53,7 @@ How to use
 ----------
 _Make sure you have the latest Maven installed, at least version 3.0.4 is required_
 
-Normally Maven you don't need to install Tobacco, but in case you want to work with development version, follow thes instructions.
+Normally you don't need to install Tobacco, but in case you want to work with development version, follow thes instructions.
 
     git clone git://github.com/noroutine/tobacco-bootstrap.git
     cd tobacco-bootstrap
