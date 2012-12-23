@@ -11,6 +11,7 @@
 * updated docs
 * added generic error page with nice 500 stacktrace output
 * got rid of trivial mappings in favor of org.springframework.web.servlet.mvc.ParameterizableViewController
+* more error handler entries for 4xx error codes added by default
 
 ## 1.0.6 (19 Dec 2012)
 * Tiles 3.0.1
