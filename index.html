@@ -49,7 +49,7 @@
 
 <p>Tobacco tries it's best to always include the latest release versions of most popular client libraries.  </p>
 
-<p>Latest Tobacco 1.0.6 charges you with Spring 3.2, Twitter Bootstrap 2.2.2 and Backbone.js 0.9.9</p>
+<p>Latest Tobacco 1.0.7 charges you with Spring 3.2, Twitter Bootstrap 2.2.2 and Backbone.js 0.9.9 </p>
 
 <h2>How to get</h2>
 
@@ -62,7 +62,7 @@
 <pre><code>mvn archetype:generate                                      \
       -DarchetypeGroupId=me.noroutine                       \
       -DarchetypeArtifactId=tobacco-bootstrap               \
-      -DarchetypeVersion=1.0.6
+      -DarchetypeVersion=1.0.7
 </code></pre>
 
 <p>or you can just type</p>
@@ -72,15 +72,22 @@
 
 <p>find the tobacco-bootstrap in the list and enter the values interactively</p>
 
-<p>This will create a two-module project, which you can open in your favorite IDE right away.</p>
+<p>This will create a two-module project, which you can open in your favorite IDE right away.
+Once your project is generated, it is recommended to setup SCM for buildnumber plugin to work. git is meant to be used.</p>
 
-<p>You can also run it from Terminal right away to see how it looks. Go to the web module and run it.</p>
+<pre><code>cd &lt;app-name&gt;
+git init
+git add -A
+git commit -a -m 'initial commit'
+</code></pre>
+
+<p>Now it's ok to run application from Terminal to see how it looks. Go to the web module and run it.</p>
 
 <pre><code>cd &lt;app-name&gt;/&lt;app-name&gt;-webapp
 mvn package t7:run
 </code></pre>
 
-<p>after few minutes of terrifying console output, you can hope to access your new app at http://localhost:8080/</p>
+<p>after few minutes of terrifying console output, you can hope to access your new app at <code>http://localhost:8080/&lt;app-name&gt;</code></p>
 
 <p>Read through <a href="https://github.com/noroutine/tobacco-bootstrap/blob/master/README.md">README</a> to get an idea how to get most from Tobacco.</p>
 
@@ -96,15 +103,15 @@ mvn package t7:run
 <li>
 <a href="http://html5boilerplate.com/">HTML5 boilderplate 4.0.2</a> for your result HTML to use best practices available</li>
 <li>
-<a href="http://modernizr.com/">modernizr.js 2.6.2</a> to make your app display good on anything</li>
+<a href="http://modernizr.com/">Modernizr.js 2.6.2</a> to make your app display good on anything</li>
 <li>
-<a href="http://necolas.github.com/normalize.css/">normalize.css 1.0.2</a> for your app to look consistent</li>
+<a href="http://necolas.github.com/normalize.css/">Normalize.css 1.0.2</a> for your app to look consistent</li>
 <li>
 <a href="http://jquery.com/">jQuery 1.8.3</a> for you to write less and do more</li>
 <li>
 <a href="http://backbonejs.org/">Backbone.js 0.9.9</a> to make your JS code to be organized more MVC-ish</li>
 <li>
-<a href="http://underscorejs.org/">Underscore.js 1.4.3</a> to give you powerful common library</li>
+<a href="http://lodash.com/">LoDash.js 1.0.0rc3</a> to give you powerful common library</li>
 <li>
 <a href="http://linkedin.github.com/dustjs/">dust.js 1.1.1</a> for you to use the fastest client-side templating engine on the planet</li>
 <li>
@@ -116,18 +123,17 @@ mvn package t7:run
 <a href="http://www.springsource.org/">Spring 3.2</a> for wiring your components</li>
 <li>
 <a href="http://tiles.apache.org/">Tiles 3.0.1</a> to organize your views</li>
-</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time or just convenient.</p>
+</ul><p>There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. </p>
 
 <h2>About JPA and database access</h2>
 
-<p>I didn't bother to configure JPA or Spring Security to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill and just narrow-minded to require database for any project. If you need it - you can still set it up though.</p>
+<p>I didn't bother to configure JPA to create another zillion-and-one archetype for 3-tier Spring web app. It's overkill to require full-blown JPA persistence and/or ORM mapping for any project. If you need it - you can still set it up though.</p>
 
 <p>All needed stuff is still there for you to configure or remove at all if you don't need it - it's just commented out and not used from start. </p>
 
-<p>Work of H5BP and TB was combined and Bootstrap is used by default, but you can still easily fallback and use plain H5BP if you don't intemd to use TB.
-That means that all the stuff from H5BP is still provided for you to benefit from professional comments, I tried to be as consistent as possible with original works.</p>
+<h2>What if I don't need TB?</h2>
 
-<p>All scripts have their minified versions present. JS and CSS is automatically compressed and aggregated if you use production profile. </p>
+<p>Work of H5BP and TB was combined and Bootstrap is used by default, but you can still easily fallback and use plain H5BP if you don't intemd to use TB.</p>
 
 <h2>Thanks</h2>
 
