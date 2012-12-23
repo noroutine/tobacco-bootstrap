@@ -5,11 +5,6 @@ package ${package}.cache;
 
 import java.lang.annotation.*;
 
-/**
- * @author Oleksii Khilkevych
- * @since 01.11.12
- */
-
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface IfNoneMatch {

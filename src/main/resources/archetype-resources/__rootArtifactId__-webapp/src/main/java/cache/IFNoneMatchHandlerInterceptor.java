@@ -14,11 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
-/**
- * @author Oleksii Khilkevych
- * @since 01.11.12
- */
-
 public class IFNoneMatchHandlerInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
