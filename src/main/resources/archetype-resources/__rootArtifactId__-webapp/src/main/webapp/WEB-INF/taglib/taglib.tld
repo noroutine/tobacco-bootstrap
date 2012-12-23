@@ -18,7 +18,7 @@
 
     <function>
         <name>minifiedJS</name>
-        <function-class>${package}.util.TagLib</function-class>
+        <function-class>${package}.util.Utils</function-class>
         <function-signature>java.lang.String minifiedJS(java.lang.String)</function-signature>
     </function>
 
