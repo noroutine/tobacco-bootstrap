@@ -21,18 +21,18 @@ All components are of latest versions. I'll continue to update this archetype wi
 
 Client-side stuff 
 * [Twitter Bootstrap 2.2.2](http://twitter.github.com/bootstrap/) for your UI to not suck
-* [HTML5 boilderplate 4.0.2](http://html5boilerplate.com/) for your result HTML to use best practices available
+* [HTML5 boilderplate 4.0.3](http://html5boilerplate.com/) for your result HTML to use best practices available
 * [Modernizr.js 2.6.2](http://modernizr.com/) to make your app display good on anything
 * [Normalize.css 1.0.2](http://necolas.github.com/normalize.css/) for your app to look consistent
 * [jQuery 1.8.3](http://jquery.com/) for you to write less and do more
-* [Backbone.js 0.9.9](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
+* [Backbone.js 0.9.10](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
 * [LoDash.js 1.0.0rc3](http://lodash.com/) to give you powerful common library
 * [dust.js 1.1.1](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
 * [dust4j 0.1](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
 * [Spring 3.2](http://www.springsource.org/) for wiring your components
-* [Spring Security 3.2.0M1]](http://www.springsource.org/) for your app to be secure
+* [Spring Security 3.2.0M1](http://www.springsource.org/) for your app to be secure
 * [Tiles 3.0.1](http://tiles.apache.org/) to organize your views
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. 

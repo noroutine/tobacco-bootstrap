@@ -166,20 +166,6 @@ var Base64 = {
 };
 
 /**
- * Comparator for two objects of similar structure, with given accessor function
- */
-function genericEntityComparator(a, b, getValue) {
-    var x = getValue(a);
-    var y = getValue(b);
-
-    // newly added items always go last, but this will at least make them appear together
-    if (x === undefined) return -1;
-    if (y === undefined) return 1;
-
-    return (x == y ? 0 : (x > y ? 1 : -1));
-}
-
-/**
  * Wrapper to pub/sub to log who sent what and who handled that
  * @param event     event
  * @param args      event arguments

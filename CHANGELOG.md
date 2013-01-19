@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 1.0.9 (19 Jan 2013)
+* HTML5 Boilerplate 4.0.3
+* Backbone.js 0.9.10
+
 ## 1.0.8 (24 Dec 2012)
 * scripts moved to the end of the page to speed up page rendering
 * tobacco maven plugin for easy project generation

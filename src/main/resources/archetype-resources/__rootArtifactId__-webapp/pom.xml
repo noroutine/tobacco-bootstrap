@@ -599,7 +599,7 @@
 
                                 <!-- HTML5 boilerplate -->
                                 <!--<include>vendor/normalize-1.0.2.min.css</include>-->
-                                <!--<include>vendor/boilerplate-4.0.2.min.css</include>-->
+                                <!--<include>vendor/boilerplate-4.0.3.min.css</include>-->
 
                                 <include>main.min.css</include>
                             </includes>
@@ -614,13 +614,13 @@
                             <includes>
                                 <include>compatibility.min.js</include>
 
-                                <include>vendor/jquery-1.8.3.min.js</include>
+                                <include>vendor/jquery-1.9.0.min.js</include>
                                 <include>vendor/jquery.tinypubsub.min.js</include>
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
                                 <!-- backbone.js -->
                                 <include>vendor/lodash-1.0.0rc3.min.js</include>
-                                <include>vendor/backbone-0.9.9.min.js</include>
+                                <include>vendor/backbone-0.9.10.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->
                                 <include>vendor/dust-core-1.1.1.min.js</include>

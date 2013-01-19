@@ -49,13 +49,13 @@
         <%-- should be included in the same order as in pom.xml in yui compression plugin --%>
         <util:js value="/resources/js/compatibility.js"/>
 
-        <util:js value="/resources/js/vendor/jquery-1.8.3.js"/>
+        <util:js value="/resources/js/vendor/jquery-1.9.0.js"/>
         <util:js value="/resources/js/vendor/jquery.tinypubsub.js"/>
         <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
         <%-- Backbone.js --%>
         <util:js value="/resources/js/vendor/lodash-1.0.0rc3.js" />
-        <util:js value="/resources/js/vendor/backbone-0.9.9.js" />
+        <util:js value="/resources/js/vendor/backbone-0.9.10.js" />
 
         <%-- Dust.js --%>
         <util:js value="/resources/js/vendor/dust-core-1.1.1.js" />

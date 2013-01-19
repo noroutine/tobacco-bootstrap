@@ -22,7 +22,7 @@
 
         <%-- HTML5 boilerplate, see: http://html5boilerplate.com/--%>
         <%--<util:css href="/resources/css/vendor/normalize-1.0.2.css" />--%>
-        <%--<util:css href="/resources/css/vendor/boilerplate-4.0.2.css" />--%>
+        <%--<util:css href="/resources/css/vendor/boilerplate-4.0.3.css" />--%>
 
         <%-- Twitter Bootstrap, see: http://twitter.github.com/bootstrap/ --%>
         <util:css href="/resources/css/vendor/bootstrap-2.2.2.css" />
