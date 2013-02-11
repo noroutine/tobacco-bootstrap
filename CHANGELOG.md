@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.1.0 (12 Feb 2012)
+* Twitter Bootstrap 2.3.0
+* jQuery 1.9.1
+* HTML5 Boilerplate 4.1.0
+
 ## 1.0.9 (19 Jan 2013)
 * jQuery 1.9.0
 * HTML5 Boilerplate 4.0.3

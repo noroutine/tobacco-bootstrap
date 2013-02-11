@@ -49,7 +49,7 @@
         <%-- should be included in the same order as in pom.xml in yui compression plugin --%>
         <util:js value="/resources/js/compatibility.js"/>
 
-        <util:js value="/resources/js/vendor/jquery-1.9.0.js"/>
+        <util:js value="/resources/js/vendor/jquery-1.9.1.js"/>
         <util:js value="/resources/js/vendor/jquery.tinypubsub.js"/>
         <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
@@ -62,7 +62,7 @@
         <util:js value="/resources/js/vendor/dust-helpers-1.1.0.js" />
 
         <%-- Twitter Bootstrap --%>
-        <util:js value="/resources/js/vendor/bootstrap-2.2.2.js" />
+        <util:js value="/resources/js/vendor/bootstrap-2.3.0.js" />
 
         <util:js value="/resources/js/common.js"/>
     </c:otherwise>

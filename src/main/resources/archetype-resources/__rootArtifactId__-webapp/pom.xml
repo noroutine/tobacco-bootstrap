@@ -594,12 +594,12 @@
                             <includes>
 
                                 <!-- Twitter Bootstrap -->
-                                <include>vendor/bootstrap-2.2.2.min.css</include>
-                                <include>vendor/bootstrap-responsive-2.2.2.min.css</include>
+                                <include>vendor/bootstrap-2.3.0.min.css</include>
+                                <include>vendor/bootstrap-responsive-2.3.0.min.css</include>
 
                                 <!-- HTML5 boilerplate -->
-                                <!--<include>vendor/normalize-1.0.2.min.css</include>-->
-                                <!--<include>vendor/boilerplate-4.0.3.min.css</include>-->
+                                <!--<include>vendor/normalize-1.1.0.min.css</include>-->
+                                <!--<include>vendor/boilerplate-4.1.0.min.css</include>-->
 
                                 <include>main.min.css</include>
                             </includes>
@@ -614,7 +614,7 @@
                             <includes>
                                 <include>compatibility.min.js</include>
 
-                                <include>vendor/jquery-1.9.0.min.js</include>
+                                <include>vendor/jquery-1.9.1.min.js</include>
                                 <include>vendor/jquery.tinypubsub.min.js</include>
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
@@ -627,7 +627,7 @@
                                 <include>vendor/dust-helpers-1.1.0.min.js</include>
 
                                 <!-- Twitter Bootstrap -->
-                                <include>vendor/bootstrap-2.2.2.min.js</include>
+                                <include>vendor/bootstrap-2.3.0.min.js</include>
 
                                 <include>common.min.js</include>
                             </includes>
