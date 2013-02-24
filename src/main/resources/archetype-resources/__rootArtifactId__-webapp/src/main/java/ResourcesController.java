@@ -95,4 +95,11 @@ public class ResourcesController {
         }
         return new JSONPObject("R.registerResources", resourcesMap.get(locale));
     }
+
+    @RequestMapping("/template/**")
+    public String template(HttpServletRequest request) {
+        String uri = request.getRequestURI();
+        return uri.substring(request.getContextPath().length() + 1, uri.length() - (uri.endsWith(".dust.js") ? ".dust.js".length() : 0) );
+    }
+
 }

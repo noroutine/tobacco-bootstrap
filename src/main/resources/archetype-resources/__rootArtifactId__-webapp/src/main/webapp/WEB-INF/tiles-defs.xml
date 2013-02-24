@@ -25,6 +25,6 @@
         <put-attribute name="content" value="/WEB-INF/jsp/errors/{1}.jsp" />
     </definition>
 
-    <definition name="template.*" template="/WEB-INF/jsp/templates/{1}.jsp" />
+    <definition name="template/*" template="/WEB-INF/jsp/templates/{1}.jsp" />
 
 </tiles-definitions>

@@ -15,5 +15,5 @@
 </c:if>
 
 <spring:message code="build.number" var="version"/>
-<spring:url value="${path}.dust.js?version=${version}&cache=${cache}" var="url" />
+<spring:url value="/template/${path}.dust.js?version=${version}&cache=${cache}" var="url" />
 <script type="text/javascript" defer="defer" src="${url}"></script>
