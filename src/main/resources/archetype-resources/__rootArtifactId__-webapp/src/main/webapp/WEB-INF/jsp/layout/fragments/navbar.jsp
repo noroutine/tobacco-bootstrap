@@ -38,7 +38,7 @@
                     </c:forEach>
                 </ul>
                 <ul class="nav pull-right">
-                    <c:forEach var="item" items="">
+                    <c:forEach var="item" items="contact">
                         <spring:message var="itemTitle" code="navbar.${symbol_dollar}{item}.title" />
                         <c:choose>
                             <c:when test="${symbol_dollar}{item eq selectedView}">
