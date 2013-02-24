@@ -54,11 +54,11 @@
         <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
         <%-- Backbone.js --%>
-        <util:js value="/resources/js/vendor/lodash-1.0.0rc3.js" />
+        <util:js value="/resources/js/vendor/lodash-1.0.1.js" />
         <util:js value="/resources/js/vendor/backbone-0.9.10.js" />
 
         <%-- Dust.js --%>
-        <util:js value="/resources/js/vendor/dust-core-1.1.1.js" />
+        <util:js value="/resources/js/vendor/dust-full-1.2.0.js" />
         <util:js value="/resources/js/vendor/dust-helpers-1.1.0.js" />
 
         <%-- Twitter Bootstrap --%>

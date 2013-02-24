@@ -8,8 +8,10 @@
 <%@ attribute name="cache" type="java.lang.Boolean" required="false" rtexprvalue="true"
               description="control caching" %>
 
+<spring:message code="build.profile" var="build_profile"/>
+
 <c:if test="${empty cache}">
-    <c:set var="cache" value="true" />
+    <c:set var="cache" value="${build_profile eq 'production'}" />
 </c:if>
 
 <spring:message code="build.number" var="version"/>

@@ -16,6 +16,8 @@
     <http pattern="/apple-touch-*.png" security="none"/>
 
     <http pattern="/resources/**" security="none"/>
+    <http pattern="/template/**" security="none"/>
+
 
     <http pattern="/resources.json" security="none"/>
 

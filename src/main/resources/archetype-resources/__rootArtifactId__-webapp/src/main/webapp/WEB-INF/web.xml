@@ -61,6 +61,10 @@
     <filter>
         <filter-name>dustCompilingFilter</filter-name>
         <filter-class>me.noroutine.dust4j.DustCompilingFilter</filter-class>
+        <init-param>
+            <param-name>templateNameRegex</param-name>
+            <param-value>/template/(.*).dust.js$</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>

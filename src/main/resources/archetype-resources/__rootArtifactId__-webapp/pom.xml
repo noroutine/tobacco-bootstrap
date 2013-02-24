@@ -468,7 +468,7 @@
         <dependency>
             <groupId>me.noroutine</groupId>
             <artifactId>dust4j</artifactId>
-            <version>0.1</version>
+            <version>0.2</version>
         </dependency>
 
         <!-- Useful libs -->
@@ -650,11 +650,11 @@
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
                                 <!-- backbone.js -->
-                                <include>vendor/lodash-1.0.0rc3.min.js</include>
+                                <include>vendor/lodash-1.0.1.min.js</include>
                                 <include>vendor/backbone-0.9.10.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->
-                                <include>vendor/dust-core-1.1.1.min.js</include>
+                                <include>vendor/dust-full-1.2.0.min.js</include>
                                 <include>vendor/dust-helpers-1.1.0.min.js</include>
 
                                 <!-- Twitter Bootstrap -->
