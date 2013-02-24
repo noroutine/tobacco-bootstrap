@@ -4,8 +4,9 @@
  * @return {String}
  */
 function randomUUID() {
-    var i;
-    var s = [], itoh = '0123456789ABCDEF';
+    var i,
+        s = [],
+        itoh = '0123456789ABCDEF';
 
     // Make array of random hex digits. The UUID only has 32 digits in it, but we
     // allocate an extra items to make room for the '-'s we'll be inserting.
@@ -36,9 +37,9 @@ var Base64 = {
 
     // public method for encoding
     encode:function (input) {
-        var output = "";
-        var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
-        var i = 0;
+        var output = "",
+            chr1, chr2, chr3, enc1, enc2, enc3, enc4,
+            i = 0;
 
         input = Base64._utf8_encode(input);
 
@@ -70,10 +71,10 @@ var Base64 = {
 
     // public method for decoding
     decode:function (input) {
-        var output = "";
-        var chr1, chr2, chr3;
-        var enc1, enc2, enc3, enc4;
-        var i = 0;
+        var output = "",
+            chr1, chr2, chr3,
+            enc1, enc2, enc3, enc4,
+            i = 0;
 
         input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
@@ -107,12 +108,14 @@ var Base64 = {
 
     // private method for UTF-8 encoding
     _utf8_encode:function (string) {
+        var utftext = "",
+            n, c;
+
         string = string.replace(/\r\n/g, "\n");
-        var utftext = "";
 
-        for (var n = 0; n < string.length; n++) {
+        for (n = 0; n < string.length; n++) {
 
-            var c = string.charCodeAt(n);
+            c = string.charCodeAt(n);
 
             if (c < 128) {
                 utftext += String.fromCharCode(c);
@@ -134,9 +137,9 @@ var Base64 = {
 
     // private method for UTF-8 decoding
     _utf8_decode:function (utftext) {
-        var string = "";
-        var i = 0;
-        var c = c1 = c2 = 0;
+        var string = "",
+            i = 0,
+            c2 = 0, c = 0;
 
         while (i < utftext.length) {
 
