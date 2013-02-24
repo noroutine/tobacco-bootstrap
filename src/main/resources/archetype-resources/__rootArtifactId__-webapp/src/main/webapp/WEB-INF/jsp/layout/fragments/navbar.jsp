@@ -22,30 +22,30 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="home"><spring:message code="project.name"/></a>
+            <a class="brand" href="<spring:url value="/home" />"><spring:message code="project.name"/></a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <c:forEach var="item" items="home,about">
                         <spring:message code="navbar.${symbol_dollar}{item}.title" var="itemTitle"/>
                         <c:choose>
                             <c:when test="${symbol_dollar}{item eq selectedView}">
-                                <li class="active"><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
+                                <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
                             </c:when>
                             <c:otherwise>
-                                <li><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
+                                <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
                 </ul>
                 <ul class="nav pull-right">
-                    <c:forEach var="item" items="contact">
+                    <c:forEach var="item" items="">
                         <spring:message var="itemTitle" code="navbar.${symbol_dollar}{item}.title" />
                         <c:choose>
                             <c:when test="${symbol_dollar}{item eq selectedView}">
-                                <li class="active"><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
+                                <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
                             </c:when>
                             <c:otherwise>
-                                <li><a href="${symbol_dollar}{item}">${symbol_dollar}{itemTitle}</a></li>
+                                <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
