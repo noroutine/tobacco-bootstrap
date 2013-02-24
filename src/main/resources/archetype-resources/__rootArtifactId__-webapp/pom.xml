@@ -614,7 +614,7 @@
                 <configuration>
                     <disableOptimizations>true</disableOptimizations>
                     <nomunge>false</nomunge>
-                    <jswarn>true</jswarn>
+                    <jswarn>false</jswarn>
                     <preserveAllSemiColons>true</preserveAllSemiColons>
                     <suffix>.min</suffix>
                     <aggregations>

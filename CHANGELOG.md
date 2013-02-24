@@ -1,6 +1,15 @@
 # ChangeLog
 
-## 1.1.0 (12 Feb 2012)
+## 1.0.11 (24 Feb 2013)
+* Lodash 1.0.1
+* dust.js 1.2.0 / dust4j 0.2
+* Spring 3.2.1
+* urls in navbar are now absolute
+* templates are now served throug separate endpoint with security disabled
+* added few usefull libs, like commons-codec and commons-fileupload
+* fixed warnings from yui in javascript code (https://github.com/noroutine/tobacco-bootstrap/issues/11)
+
+## 1.0.10 (12 Feb 2013)
 * Twitter Bootstrap 2.3.0
 * jQuery 1.9.1
 * HTML5 Boilerplate 4.1.0
