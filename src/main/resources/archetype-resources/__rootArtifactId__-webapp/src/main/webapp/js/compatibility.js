@@ -1,6 +1,6 @@
 Object.keys = Object.keys || (function () {
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !{toString:null}.propertyIsEnumerable("toString"),
+        hasDontEnumBug = !{toString: null}.propertyIsEnumerable("toString"),
         DontEnums = [
             'toString',
             'toLocaleString',
@@ -16,8 +16,11 @@ Object.keys = Object.keys || (function () {
         if (typeof o != "object" && typeof o != "function" || o === null)
             throw new TypeError("Object.keys called on a non-object");
 
-        var result = [];
-        for (var name in o) {
+        var result = [],
+            name,
+            i;
+
+        for (name in o) {
             //noinspection JSUnfilteredForInLoop
             if (hasOwnProperty.call(o, name)) {
                 //noinspection JSUnfilteredForInLoop
@@ -26,7 +29,7 @@ Object.keys = Object.keys || (function () {
         }
 
         if (hasDontEnumBug) {
-            for (var i = 0; i < DontEnumsLength; i++) {
+            for (i = 0; i < DontEnumsLength; i++) {
                 if (hasOwnProperty.call(o, DontEnums[i]))
                     result.push(DontEnums[i]);
             }
@@ -37,17 +40,18 @@ Object.keys = Object.keys || (function () {
 })();
 
 // Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
+(function () {
+    var method,
+        noop = function () {
+        },
+        methods = [
+            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+            'timeStamp', 'trace', 'warn'
+        ],
+        length = methods.length,
+        console = (window.console = window.console || {});
 
     while (length--) {
         method = methods[length];
