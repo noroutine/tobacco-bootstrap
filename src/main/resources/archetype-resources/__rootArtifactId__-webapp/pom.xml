@@ -625,8 +625,8 @@
                             <includes>
 
                                 <!-- Twitter Bootstrap -->
-                                <include>vendor/bootstrap-2.3.0.min.css</include>
-                                <include>vendor/bootstrap-responsive-2.3.0.min.css</include>
+                                <include>vendor/bootstrap-2.3.1.min.css</include>
+                                <include>vendor/bootstrap-responsive-2.3.1.min.css</include>
 
                                 <!-- HTML5 boilerplate -->
                                 <!--<include>vendor/normalize-1.1.0.min.css</include>-->
@@ -658,7 +658,7 @@
                                 <include>vendor/dust-helpers-1.1.0.min.js</include>
 
                                 <!-- Twitter Bootstrap -->
-                                <include>vendor/bootstrap-2.3.0.min.js</include>
+                                <include>vendor/bootstrap-2.3.1.min.js</include>
 
                                 <include>common.min.js</include>
                             </includes>

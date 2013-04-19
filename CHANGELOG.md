@@ -1,5 +1,8 @@
 # ChangeLog
 
+## 1.0.12 (19 Apr 2013)
+* Twitter Bootstrap 2.3.1
+
 ## 1.0.11 (24 Feb 2013)
 * Lodash 1.0.1
 * dust.js 1.2.0 / dust4j 0.2

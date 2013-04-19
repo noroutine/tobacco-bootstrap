@@ -25,8 +25,8 @@
         <%--<util:css href="/resources/css/vendor/boilerplate-4.1.0.css" />--%>
 
         <%-- Twitter Bootstrap, see: http://twitter.github.com/bootstrap/ --%>
-        <util:css href="/resources/css/vendor/bootstrap-2.3.0.css" />
-        <util:css href="/resources/css/vendor/bootstrap-responsive-2.3.0.css" />
+        <util:css href="/resources/css/vendor/bootstrap-2.3.1.css" />
+        <util:css href="/resources/css/vendor/bootstrap-responsive-2.3.1.css" />
 
         <util:css href="/resources/css/main.css" />
     </c:otherwise>

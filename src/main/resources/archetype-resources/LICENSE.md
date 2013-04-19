@@ -77,8 +77,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://backbonejs.org>
 
-${h2} Twitter Bootstrap 2.2.2
-Copyright 2012 Twitter, Inc.
+${h2} Twitter Bootstrap 2.3.1
+Copyright 2013 Twitter, Inc.
 
 Designed and built with all the love in the world @twitter by @mdo and @fat.
 
