@@ -345,7 +345,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <https://github.com/aFarkas/html5shiv>
 
-${h2} Normalize.css 1.0.2
+${h2} Normalize.css 1.1.1
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

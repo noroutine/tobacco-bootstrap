@@ -21,7 +21,7 @@
     <c:otherwise>
 
         <%-- HTML5 boilerplate, see: http://html5boilerplate.com/--%>
-        <%--<util:css href="/resources/css/vendor/normalize-1.1.0.css" />--%>
+        <%--<util:css href="/resources/css/vendor/normalize-1.1.1.css" />--%>
         <%--<util:css href="/resources/css/vendor/boilerplate-4.1.0.css" />--%>
 
         <%-- Twitter Bootstrap, see: http://twitter.github.com/bootstrap/ --%>

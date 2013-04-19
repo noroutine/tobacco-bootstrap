@@ -52,7 +52,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://backbonejs.org>
 
-## Twitter Bootstrap 2.2.2
+## Twitter Bootstrap 2.3.1
 Copyright 2012 Twitter, Inc.
 
 Designed and built with all the love in the world @twitter by @mdo and @fat.
@@ -320,7 +320,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <https://github.com/aFarkas/html5shiv>
 
-## Normalize.css 1.0.2
+## Normalize.css 1.1.1
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
