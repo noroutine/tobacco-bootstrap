@@ -58,7 +58,7 @@
         <util:js value="/resources/js/vendor/backbone-1.0.0.js" />
 
         <%-- Dust.js --%>
-        <util:js value="/resources/js/vendor/dust-full-1.2.0.js" />
+        <util:js value="/resources/js/vendor/dust-full-1.2.3.js" />
         <util:js value="/resources/js/vendor/dust-helpers-1.1.0.js" />
 
         <%-- Twitter Bootstrap --%>

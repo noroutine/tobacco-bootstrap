@@ -6,6 +6,8 @@
 * HTML5 Boilerplate 4.2.0
 * Backbone 1.0.0
 * LoDash 1.2.0
+* dustjs 1.2.3 / dust4j 0.3
+* Spring 3.2.2
 
 ## 1.0.11 (24 Feb 2013)
 * Lodash 1.0.1

@@ -241,7 +241,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://www.modernizr.com/>
 
-## dust.js - Asynchronous Templating v1.1.1
+## dust.js - Asynchronous Templating v1.2.3
+Copyright (c) 2013, LinkedIn
 Copyright (c) 2010, Aleksander Williams
 
 Permission is hereby granted, free of charge, to any person

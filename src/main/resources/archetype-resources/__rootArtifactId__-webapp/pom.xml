@@ -60,7 +60,7 @@
 
         <jstl.version>1.2</jstl.version>
         <tiles.version>3.0.1</tiles.version>
-        <spring.version>3.2.1.RELEASE</spring.version>
+        <spring.version>3.2.2.RELEASE</spring.version>
         <spring-security.version>3.2.0.M1</spring-security.version>
         <spring-mobile.version>1.0.1.RELEASE</spring-mobile.version>
         <aspectj.version>1.7.1</aspectj.version>
@@ -468,7 +468,7 @@
         <dependency>
             <groupId>me.noroutine</groupId>
             <artifactId>dust4j</artifactId>
-            <version>0.2</version>
+            <version>0.3</version>
         </dependency>
 
         <!-- Useful libs -->
@@ -654,7 +654,7 @@
                                 <include>vendor/backbone-1.0.0.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->
-                                <include>vendor/dust-full-1.2.0.min.js</include>
+                                <include>vendor/dust-full-1.2.3.min.js</include>
                                 <include>vendor/dust-helpers-1.1.0.min.js</include>
 
                                 <!-- Twitter Bootstrap -->
