@@ -51,8 +51,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <http://tobacco.noroutine.me>
 
-${h2} Backbone.js 0.9.9
-Copyright (c) 2010-2012 Jeremy Ashkenas, DocumentCloud
+${h2} Backbone.js 1.0.0
+Copyright (c) 2010-2013 Jeremy Ashkenas, DocumentCloud
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -96,8 +96,8 @@ limitations under the License.
 
 <http://twitter.github.com/bootstrap/>
 
-${h2} jQuery JavaScript Library v1.8.3
-Copyright 2012 jQuery Foundation and other contributors
+${h2} jQuery JavaScript Library v1.9.1
+Copyright 2013 jQuery Foundation and other contributors
 http://jquery.com/
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -191,8 +191,8 @@ SOFTWARE.
 
 <http://www.jstorage.info/>
 
-${h2} Lo-Dash 1.0.0-rc.3
-(c) 2012 John-David Dalton <http://allyoucanleet.com/>
+${h2} Lo-Dash 1.2.0
+(c) 2013 John-David Dalton <http://allyoucanleet.com/>
 Available under MIT license <http://lodash.com/license>
 Based on Underscore.js 1.4.3, copyright © 2009-2012 Jeremy Ashkenas, DocumentCloud Inc. <http://documentcloud.github.com/underscore>
 
@@ -368,7 +368,7 @@ SOFTWARE.
 
 <http://git.io/normalize>
 
-${h2} HTML5 Boilerplate 4.0.2
+${h2} HTML5 Boilerplate 4.2.0
 Copyright (c) HTML5 Boilerplate
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

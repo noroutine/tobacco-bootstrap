@@ -630,7 +630,7 @@
 
                                 <!-- HTML5 boilerplate -->
                                 <!--<include>vendor/normalize-1.1.1.min.css</include>-->
-                                <!--<include>vendor/boilerplate-4.1.0.min.css</include>-->
+                                <!--<include>vendor/boilerplate-4.2.0.min.css</include>-->
 
                                 <include>main.min.css</include>
                             </includes>
@@ -650,8 +650,8 @@
                                 <include>vendor/jstorage-0.3.1.min.js</include>
 
                                 <!-- backbone.js -->
-                                <include>vendor/lodash-1.0.1.min.js</include>
-                                <include>vendor/backbone-0.9.10.min.js</include>
+                                <include>vendor/lodash-1.2.0.min.js</include>
+                                <include>vendor/backbone-1.0.0.min.js</include>
 
                                 <!-- dust.js, stock minified files don't work -->
                                 <include>vendor/dust-full-1.2.0.min.js</include>

@@ -54,8 +54,8 @@
         <util:js value="/resources/js/vendor/jstorage-0.3.1.js"/>
 
         <%-- Backbone.js --%>
-        <util:js value="/resources/js/vendor/lodash-1.0.1.js" />
-        <util:js value="/resources/js/vendor/backbone-0.9.10.js" />
+        <util:js value="/resources/js/vendor/lodash-1.2.0.js" />
+        <util:js value="/resources/js/vendor/backbone-1.0.0.js" />
 
         <%-- Dust.js --%>
         <util:js value="/resources/js/vendor/dust-full-1.2.0.js" />
@@ -73,7 +73,7 @@
 <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    g.src='//www.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 --%>

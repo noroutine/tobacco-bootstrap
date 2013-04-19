@@ -3,6 +3,9 @@
 ## 1.0.12 (19 Apr 2013)
 * Twitter Bootstrap 2.3.1
 * Normalize.css 1.1.1
+* HTML5 Boilerplate 4.2.0
+* Backbone 1.0.0
+* LoDash 1.2.0
 
 ## 1.0.11 (24 Feb 2013)
 * Lodash 1.0.1
