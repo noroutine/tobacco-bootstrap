@@ -1,5 +1,5 @@
 //
-// Dust - Asynchronous Templating v1.2.0
+// Dust - Asynchronous Templating v1.2.3
 // http://akdubya.github.com/dustjs
 //
 // Copyright (c) 2010, Aleksander Williams
@@ -15,6 +15,8 @@ function getGlobal(){
 }
 
 (function(dust) {
+
+dust.helpers = {};
 
 dust.cache = {};
 
@@ -187,8 +189,8 @@ Context.prototype.current = function() {
 
 Context.prototype.getBlock = function(key, chk, ctx) {
   if (typeof key === "function") {
-    key = key(chk, ctx).data;
-    chk.data = "";
+    key = key(chk, ctx).data.join("");
+    chk.data = []; //ie7 perf
   }
 
   var blocks = this.blocks;
@@ -235,7 +237,7 @@ Stub.prototype.flush = function() {
 
   while (chunk) {
     if (chunk.flushable) {
-      this.out += chunk.data;
+      this.out += chunk.data.join(""); //ie7 perf
     } else if (chunk.error) {
       this.callback(chunk.error);
       this.flush = function() {};
@@ -258,7 +260,7 @@ Stream.prototype.flush = function() {
 
   while(chunk) {
     if (chunk.flushable) {
-      this.emit('data', chunk.data);
+      this.emit('data', chunk.data.join("")); //ie7 perf
     } else if (chunk.error) {
       this.emit('error', chunk.error);
       this.flush = function() {};
@@ -314,7 +316,7 @@ Stream.prototype.pipe = function(stream) {
 function Chunk(root, next, taps) {
   this.root = root;
   this.next = next;
-  this.data = '';
+  this.data = []; //ie7 perf
   this.flushable = false;
   this.taps = taps;
 }
@@ -325,7 +327,7 @@ Chunk.prototype.write = function(data) {
   if (taps) {
     data = taps.go(data);
   }
-  this.data += data;
+  this.data.push(data);
   return this;
 };
 
@@ -522,6 +524,8 @@ Chunk.prototype.helper = function(name, context, bodies, params) {
   // handle invalid helpers, similar to invalid filters
   if( dust.helpers[name]){
    return dust.helpers[name](this, context, bodies, params);
+  } else {
+    return this;
   }
 };
 
@@ -614,7 +618,7 @@ if (typeof exports !== "undefined") {
   }
   module.exports = dust;
 }
-(function(dust) {
+var dustCompiler = (function(dust) {
 
 dust.compile = function(source, name, strip) {
   try {
@@ -928,7 +932,7 @@ dust.nodes = {
         list = [];
 
     for (var i=0,len=keys.length; i<len; i++) {
-      if (Array.isArray(keys[i]))
+      if (dust.isArray(keys[i]))
         list.push(dust.compileNode(context, keys[i]));
       else
         list.push("\"" + keys[i] + "\"");
@@ -954,7 +958,15 @@ var escape = (typeof JSON === "undefined")
   ? function(str) { return "\"" + dust.escapeJs(str) + "\"" }
   : JSON.stringify;
 
-})(typeof exports !== 'undefined' ? exports : getGlobal());
+  return dust;
+
+});
+
+if (typeof exports !== 'undefined') {
+  module.exports = dustCompiler;
+} else {
+  dustCompiler(getGlobal());
+}
 (function(dust){
 
 var parser = (function(){
@@ -1179,8 +1191,9 @@ var parser = (function(){
                 result4 = parse_bodies();
                 if (result4 !== null) {
                   result5 = parse_end_tag();
+                  result5 = result5 !== null ? result5 : "";
                   if (result5 !== null) {
-                    result6 = (function(offset, line, column, t, b, e, n) { return t[1].text === n.text;})(pos.offset, pos.line, pos.column, result0, result3, result4, result5) ? "" : null;
+                    result6 = (function(offset, line, column, t, b, e, n) {if( (!n) || (t[1].text !== n.text) ) { throw new Error("Expected end tag for "+t[1].text+" but it was not found. At line : "+line+", column : " + column)} return true;})(pos.offset, pos.line, pos.column, result0, result3, result4, result5) ? "" : null;
                     if (result6 !== null) {
                       result0 = [result0, result1, result2, result3, result4, result5, result6];
                     } else {
@@ -2692,7 +2705,7 @@ var parser = (function(){
       }
       
       function parse_buffer() {
-        var result0, result1, result2, result3;
+        var result0, result1, result2, result3, result4;
         var pos0, pos1, pos2, pos3;
         
         reportFailures++;
@@ -2748,17 +2761,32 @@ var parser = (function(){
               pos = clone(pos3);
             }
             if (result2 !== null) {
-              if (input.length > pos.offset) {
-                result3 = input.charAt(pos.offset);
-                advance(pos, 1);
+              pos3 = clone(pos);
+              reportFailures++;
+              result3 = parse_eol();
+              reportFailures--;
+              if (result3 === null) {
+                result3 = "";
               } else {
                 result3 = null;
-                if (reportFailures === 0) {
-                  matchFailed("any character");
-                }
+                pos = clone(pos3);
               }
               if (result3 !== null) {
-                result1 = [result1, result2, result3];
+                if (input.length > pos.offset) {
+                  result4 = input.charAt(pos.offset);
+                  advance(pos, 1);
+                } else {
+                  result4 = null;
+                  if (reportFailures === 0) {
+                    matchFailed("any character");
+                  }
+                }
+                if (result4 !== null) {
+                  result1 = [result1, result2, result3, result4];
+                } else {
+                  result1 = null;
+                  pos = clone(pos2);
+                }
               } else {
                 result1 = null;
                 pos = clone(pos2);
@@ -2772,7 +2800,7 @@ var parser = (function(){
             pos = clone(pos2);
           }
           if (result1 !== null) {
-            result1 = (function(offset, line, column, c) {return c})(pos1.offset, pos1.line, pos1.column, result1[2]);
+            result1 = (function(offset, line, column, c) {return c})(pos1.offset, pos1.line, pos1.column, result1[3]);
           }
           if (result1 === null) {
             pos = clone(pos1);
@@ -2805,17 +2833,32 @@ var parser = (function(){
                   pos = clone(pos3);
                 }
                 if (result2 !== null) {
-                  if (input.length > pos.offset) {
-                    result3 = input.charAt(pos.offset);
-                    advance(pos, 1);
+                  pos3 = clone(pos);
+                  reportFailures++;
+                  result3 = parse_eol();
+                  reportFailures--;
+                  if (result3 === null) {
+                    result3 = "";
                   } else {
                     result3 = null;
-                    if (reportFailures === 0) {
-                      matchFailed("any character");
-                    }
+                    pos = clone(pos3);
                   }
                   if (result3 !== null) {
-                    result1 = [result1, result2, result3];
+                    if (input.length > pos.offset) {
+                      result4 = input.charAt(pos.offset);
+                      advance(pos, 1);
+                    } else {
+                      result4 = null;
+                      if (reportFailures === 0) {
+                        matchFailed("any character");
+                      }
+                    }
+                    if (result4 !== null) {
+                      result1 = [result1, result2, result3, result4];
+                    } else {
+                      result1 = null;
+                      pos = clone(pos2);
+                    }
                   } else {
                     result1 = null;
                     pos = clone(pos2);
@@ -2829,7 +2872,7 @@ var parser = (function(){
                 pos = clone(pos2);
               }
               if (result1 !== null) {
-                result1 = (function(offset, line, column, c) {return c})(pos1.offset, pos1.line, pos1.column, result1[2]);
+                result1 = (function(offset, line, column, c) {return c})(pos1.offset, pos1.line, pos1.column, result1[3]);
               }
               if (result1 === null) {
                 pos = clone(pos1);
