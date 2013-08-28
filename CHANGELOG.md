@@ -8,6 +8,7 @@
 * Spring Security 3.2.0 M2
 * split vendor js/css from project assets
 * tiles now have regexp/wildcard support
+* added special maven property to hold the root project location
 
 ## 1.0.12 (19 Apr 2013)
 * Twitter Bootstrap 2.3.1
