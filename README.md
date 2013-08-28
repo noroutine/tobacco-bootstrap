@@ -31,7 +31,7 @@ Client-side stuff
 * [dust4j 0.5.2](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
-* [Spring 3.2.1](http://www.springsource.org/) for wiring your components
+* [Spring 3.2.4](http://www.springsource.org/) for wiring your components
 * [Spring Security 3.2.0M2](http://www.springsource.org/) for your app to be secure
 * [Tiles 3.0.1](http://tiles.apache.org/) to organize your views
 
