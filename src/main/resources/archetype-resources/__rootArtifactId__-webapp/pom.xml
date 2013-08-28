@@ -62,7 +62,7 @@
 
         <jstl.version>1.2</jstl.version>
         <tiles.version>3.0.1</tiles.version>
-        <spring.version>3.2.2.RELEASE</spring.version>
+        <spring.version>3.2.4.RELEASE</spring.version>
         <spring-security.version>3.2.0.M2</spring-security.version>
         <spring-mobile.version>1.0.1.RELEASE</spring-mobile.version>
         <aspectj.version>1.7.1</aspectj.version>

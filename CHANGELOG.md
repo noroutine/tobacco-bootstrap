@@ -1,5 +1,14 @@
 # ChangeLog
 
+## 1.0.14 (28 Aug 2013)
+* Twitter Bootstrap 3.0.0
+* jQuery 2.0.3
+* LoDash 1.3.1
+* Spring 3.2.4
+* Spring Security 3.2.0 M2
+* split vendor js/css from project assets
+* tiles now have regexp/wildcard support
+
 ## 1.0.12 (19 Apr 2013)
 * Twitter Bootstrap 2.3.1
 * Normalize.css 1.1.1
