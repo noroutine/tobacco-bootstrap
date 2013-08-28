@@ -12,7 +12,7 @@
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags/util" %>
 <%@ taglib prefix="tb" uri="/WEB-INF/taglib/taglib.tld" %>
 
-<div class="muted">
+<div class="text-muted">
     <h1>404</h1>
     <p class="lead">Page Not Found</p>
 </div>

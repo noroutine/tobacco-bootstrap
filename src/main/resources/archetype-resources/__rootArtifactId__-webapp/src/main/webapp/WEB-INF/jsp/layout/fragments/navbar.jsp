@@ -14,43 +14,48 @@
 
 <tiles:importAttribute name="view" toName="selectedView" />
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="<spring:url value="/home" />"><spring:message code="project.name"/></a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <c:forEach var="item" items="home,about">
-                        <spring:message code="navbar.${symbol_dollar}{item}.title" var="itemTitle"/>
-                        <c:choose>
-                            <c:when test="${symbol_dollar}{item eq selectedView}">
-                                <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
-                            </c:when>
-                            <c:otherwise>
-                                <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </ul>
-                <ul class="nav pull-right">
-                    <c:forEach var="item" items="contact">
-                        <spring:message var="itemTitle" code="navbar.${symbol_dollar}{item}.title" />
-                        <c:choose>
-                            <c:when test="${symbol_dollar}{item eq selectedView}">
-                                <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
-                            </c:when>
-                            <c:otherwise>
-                                <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </ul>
-            </div> <!--/.nav-collapse -->
-        </div>
+<%--
+This is the dynamic remake of http://getbootstrap.com/components/#navbar
+--%>
+<nav class="navbar navbar-inverse">
+    <%-- Brand and toggle get grouped for better mobile display --%>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<spring:url value="/home" />"><spring:message code="project.name"/></a>
     </div>
-</div>
+
+    <%-- Collect the nav links, forms, and other content for toggling --%>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <c:forEach var="item" items="home,about">
+                <spring:message code="navbar.${symbol_dollar}{item}.title" var="itemTitle"/>
+                <c:choose>
+                    <c:when test="${symbol_dollar}{item eq selectedView}">
+                        <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <c:forEach var="item" items="contact">
+                <spring:message var="itemTitle" code="navbar.${symbol_dollar}{item}.title"/>
+                <c:choose>
+                    <c:when test="${symbol_dollar}{item eq selectedView}">
+                        <li class="active"><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="<spring:url value="/${symbol_dollar}{item}" />">${symbol_dollar}{itemTitle}</a></li>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+        </ul>
+    </div> <%-- /.navbar-collapse --%>
+</nav>

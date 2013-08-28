@@ -16,31 +16,29 @@
 
 <c:set var="authException" value="${symbol_dollar}{sessionScope['SPRING_SECURITY_LAST_EXCEPTION']}" />
 
-<form action='${symbol_dollar}{security_check_url}' method='post' class="form-horizontal">
+<form action='${symbol_dollar}{security_check_url}' method='post' class="form-horizontal col-lg-6" role="form">
     <fieldset>
         <legend>Login with Username and Password</legend>
         <c:if test="${symbol_dollar}{not empty authException}">
-        <div class="control-group">
-            <div class="controls">
-                <p class="text-error">Sign-in failed: ${symbol_dollar}{fn:toLowerCase(authException.message)}</p>
+            <div class="form-group">
+                <p class="text-info text-center col-lg-6">Sign-in failed: ${symbol_dollar}{fn:toLowerCase(authException.message)}</p>
             </div>
-        </div>
         </c:if>
-        <div class="control-group">
-            <label for="j_username" class="control-label">Username:</label>
-            <div class="controls">
-                <input type='text' id="j_username" name='j_username' value='' placeholder="Enter username..." />
+        <div class="form-group">
+            <label for="j_username" class="control-label col-lg-2" >Username:</label>
+            <div class="col-lg-4">
+                <input type='text' class="form-control" id="j_username" name='j_username' value='' placeholder="Enter username..." />
             </div>
         </div>
-        <div class="control-group">
-            <label for="j_password" class="control-label">Password:</label>
-            <div class="controls">
-                <input type='password' id="j_password" name='j_password' placeholder="Enter password..."/>
+        <div class="form-group">
+            <label for="j_password" class="control-label col-lg-2 ">Password:</label>
+            <div class="col-lg-4">
+                <input type='password' class="form-control" id="j_password" name='j_password' placeholder="Enter password..."/>
             </div>
         </div>
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn">Sign in</button>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-4">
+                <button type="submit" class="btn btn-default">Sign in</button>
             </div>
         </div>
     </fieldset>

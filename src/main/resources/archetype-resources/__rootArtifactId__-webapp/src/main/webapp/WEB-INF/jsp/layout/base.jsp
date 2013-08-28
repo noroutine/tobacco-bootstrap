@@ -15,6 +15,8 @@
 <spring:url value="/" var="base" />
 
 <!DOCTYPE html>
+<%-- Nice DOM Banner --%>
+<!-- <spring:message code="project.name"/> | <spring:message code="project.version"/> | <spring:message code="project.description"/> -->
 <%-- Modernizr removed no-js with js to detect javascript support, see http://modernizr.github.com/Modernizr/annotatedsource.html--%>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -36,7 +38,7 @@
     <%-- Place favicon.ico and apple-touch-icon.png in the webapps directory --%>
     <link rel="icon" type="image/x-icon" href="${symbol_dollar}{base}/favicon.ico">
 
-    <util:js value="/resources/js/vendor/modernizr-2.6.2.js" />
+    <util:js value="/resources/vendor/js/modernizr-2.6.2.js" />
 
     <%-- https://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html --%>
     <link rel="apple-touch-icon" href="${symbol_dollar}{base}/apple-touch-icon.png"/>

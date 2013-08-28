@@ -60,6 +60,12 @@
                         <include>**/*.js</include>
                         <include>**/*.ico</include>
                         <include>**/*.css</include>
+                        <include>**/*.eot</include>
+                        <include>**/*.svg</include>
+                        <include>**/*.ttf</include>
+                        <include>**/*.woff</include>
+                        <include>**/*.ogg</include>
+                        <include>**/*.mp3</include>
                     </includes>
                 </fileSet>
             </fileSets>

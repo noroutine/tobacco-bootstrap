@@ -39,9 +39,7 @@
     <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
          <property name="customEditors">
              <map>
-                 <entry key="java.io.Reader">
-                     <bean class="${package}.util.ServletContextResourceReaderPropertyEditor" />
-                 </entry>
+                 <entry key="java.io.Reader" value="${package}.util.ServletContextResourceReaderPropertyEditor" />
              </map>
          </property>
      </bean>

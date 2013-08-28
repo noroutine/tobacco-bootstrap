@@ -16,17 +16,18 @@
 
 <c:choose>
     <c:when test="${symbol_dollar}{build_profile eq 'production'}">
+        <util:css href="/resources/vendor/css/all.css" />
         <util:css href="/resources/css/all.css" />
     </c:when>
     <c:otherwise>
 
         <%-- HTML5 boilerplate, see: http://html5boilerplate.com/--%>
-        <%--<util:css href="/resources/css/vendor/normalize-1.1.1.css" />--%>
-        <%--<util:css href="/resources/css/vendor/boilerplate-4.2.0.css" />--%>
+        <%--<util:css href="/resources/vendor/css/normalize-2.1.3.css" />--%>
+        <%--<util:css href="/resources/vendor/css/boilerplate-4.2.0.css" />--%>
 
-        <%-- Twitter Bootstrap, see: http://twitter.github.com/bootstrap/ --%>
-        <util:css href="/resources/css/vendor/bootstrap-2.3.1.css" />
-        <util:css href="/resources/css/vendor/bootstrap-responsive-2.3.1.css" />
+        <%-- Twitter Bootstrap, see: http://getbootstrap.com/ --%>
+        <util:css href="/resources/vendor/css/bootstrap-3.0.0.css" />
+        <util:css href="/resources/vendor/css/bootstrap-theme-3.0.0.css" />
 
         <util:css href="/resources/css/main.css" />
     </c:otherwise>

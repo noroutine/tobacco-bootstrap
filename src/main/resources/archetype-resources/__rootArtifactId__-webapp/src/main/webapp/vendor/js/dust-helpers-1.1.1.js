@@ -1,16 +1,12 @@
 //
-// Dust-helpers - Additional functionality for dustjs-linkedin package v1.1.0
+// Dust-helpers - Additional functionality for dustjs-linkedin package v1.1.1
 //
 // Copyright (c) 2012, LinkedIn
 // Released under the MIT License.
 //
 
-(function(){
+(function(dust){
 
-if (typeof exports !== "undefined")
-{
-  dust = require("dustjs-linkedin");
-}
 // Note: all error conditions are logged to console and failed silently
 
 /* make a safe version of console if it is not available
@@ -236,6 +232,7 @@ var helpers = {
    * @param key is the value to perform math against
    * @param method is the math method,  is a valid string supported by math helper like mod, add, subtract
    * @param operand is the second value needed for operations like mod, add, subtract, etc.
+   * @param round is a flag to assure that an integer is returned
    */
   "math": function ( chunk, context, bodies, params ) {
     //key and method are required for further processing
@@ -244,6 +241,7 @@ var helpers = {
           method = params.method,
           // operand can be null for "abs", ceil and floor
           operand = params.operand,
+          round = params.round,
           mathOut = null,
           operError = function(){_console.log("operand is required for this math method"); return null;};
       key  = dust.helpers.tap(key, chunk, context);
@@ -277,6 +275,9 @@ var helpers = {
         case "floor":
           mathOut = Math.floor(parseFloat(key));
           break;
+        case "round":
+          mathOut = Math.round(parseFloat(key));
+          break;
         case "abs":
           mathOut = Math.abs(parseFloat(key));
           break;
@@ -285,6 +286,9 @@ var helpers = {
      }
 
       if (mathOut !== null){
+        if (round) {
+          mathOut = Math.round(mathOut);
+        }
         if (bodies && bodies.block) {
           // with bodies act like the select helper with mathOut as the key
           // like the select helper bodies['else'] is meaningless and is ignored
@@ -496,8 +500,4 @@ var helpers = {
 
 dust.helpers = helpers;
 
-if (typeof exports !== "undefined")
-{
-  module.exports = dust;
-}
-})();
+})(typeof exports !== 'undefined' ? module.exports = require('dustjs-linkedin') : dust);

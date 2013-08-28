@@ -10,6 +10,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- This property is overriden in sub-modules to offer one reliable way to refer to project root -->
+        <main.basedir>${project.basedir}</main.basedir>
     </properties>
 
     <!-- for build number plugin to work, run git init in project dir, or specify correct SCM URLs -->
@@ -70,9 +73,9 @@
         </pluginRepository>
 
         <pluginRepository>
-            <id>repo</id>
-            <name>Project repository</name>
-            <url>${project.baseUri}/repo</url>
+            <id>project-repo</id>
+            <name>Project Repository</name>
+            <url>${main.basedir}/repository</url>
         </pluginRepository>
     </pluginRepositories>
     <repositories>
@@ -110,9 +113,9 @@
         </repository>
 
         <repository>
-            <id>repo</id>
-            <name>Project repository</name>
-            <url>${project.baseUri}/repository</url>
+            <id>project-repo</id>
+            <name>Project Repository</name>
+            <url>${main.basedir}/repository</url>
         </repository>
     </repositories>
 

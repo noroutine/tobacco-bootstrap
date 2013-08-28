@@ -14,17 +14,17 @@
         <put-attribute name="content" value=""/>
     </definition>
 
-    <definition name="view.*" extends="base">
+    <definition name="WILDCARD:view.*" extends="base">
         <put-attribute name="title" value="page.{1}.title" />
         <put-attribute name="view" value="{1}" cascade="true" />
         <put-attribute name="content" value="/WEB-INF/jsp/views/{1}.jsp" />
     </definition>
 
-    <definition name="error.*" extends="base">
+    <definition name="WILDCARD:error.*" extends="base">
         <put-attribute name="title" value="error.general.title" />
         <put-attribute name="content" value="/WEB-INF/jsp/errors/{1}.jsp" />
     </definition>
 
-    <definition name="template/*" template="/WEB-INF/jsp/templates/{1}.jsp" />
+    <definition name="WILDCARD:template/*" template="/WEB-INF/jsp/templates/{1}.jsp" />
 
 </tiles-definitions>
