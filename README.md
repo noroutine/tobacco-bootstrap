@@ -20,19 +20,19 @@ What's inside
 All components are of latest versions. I'll continue to update this archetype with latest versions.
 
 Client-side stuff 
-* [Twitter Bootstrap 2.3.0](http://twitter.github.com/bootstrap/) for your UI to not suck
-* [HTML5 boilderplate 4.1.0](http://html5boilerplate.com/) for your result HTML to use best practices available
+* [Twitter Bootstrap 3.0.0](http://getbootstrap.com/) for your UI to not suck
+* [HTML5 boilderplate 4.2.0](http://html5boilerplate.com/) for your result HTML to use best practices available
 * [Modernizr.js 2.6.2](http://modernizr.com/) to make your app display good on anything
-* [Normalize.css 1.1.0](http://necolas.github.com/normalize.css/) for your app to look consistent
-* [jQuery 1.9,1](http://jquery.com/) for you to write less and do more
-* [Backbone.js 0.9.10](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
-* [LoDash.js 1.0.1](http://lodash.com/) to give you powerful common library
-* [dust.js 1.2.0](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
-* [dust4j 0.2](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
+* [Normalize.css 2.1.3](http://necolas.github.com/normalize.css/) for your app to look consistent
+* [jQuery 2.0.3](http://jquery.com/) for you to write less and do more
+* [Backbone.js 1.0.0](http://backbonejs.org/) to make your JS code to be organized more MVC-ish
+* [LoDash.js 1.3.1](http://lodash.com/) to give you powerful common library
+* [dust.js 2.0.2](http://linkedin.github.com/dustjs/) for you to use the fastest client-side templating engine on the planet
+* [dust4j 0.5.2](http://dust4j.noroutine.me/) to let you write your templates in pure JSP and make them dynamic
 
 Server-side stuff
 * [Spring 3.2.1](http://www.springsource.org/) for wiring your components
-* [Spring Security 3.2.0M1](http://www.springsource.org/) for your app to be secure
+* [Spring Security 3.2.0M2](http://www.springsource.org/) for your app to be secure
 * [Tiles 3.0.1](http://tiles.apache.org/) to organize your views
 
 There is some dozen of other smaller and less important stuff that you find adding to any new project all the time, because it's useful or just convenient. 
